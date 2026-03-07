@@ -1,7 +1,9 @@
 \documentclass[11pt,twoside]{article}
 \usepackage{fontspec}
-\usepackage[paperwidth=17.00cm,paperheight=25.00cm,top=1.40cm,inner=1.95cm,outer=1.65cm,bottom=2.50cm]{geometry}
+\usepackage[paperwidth=17.00cm,paperheight=25.00cm,top=1.65cm,inner=2.20cm,outer=1.65cm,bottom=2.50cm]{geometry}
 \usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\setotherlanguage[variant=ancient]{greek}
 \usepackage{editio-critica}
 %
 \title{\huge\textbf{COPLAS SOBRE LA MUERTE DE SU PADRE}}
@@ -9,10 +11,7 @@
 \date{\vspace{60pt}\textsc{Edición crítica liminar}\\\fontsize{40}{11}\selectfont{\vfill\textbf{\LaTeX}}}
 %
 \setmainfont{TemporaNR}[RawFeature=lnum]
-\setdefaultlanguage{spanish}
-\setotherlanguage[variant=ancient]{greek}
 %
-
 \usepackage{tikz}
 \usetikzlibrary{trees}
 %
@@ -30,10 +29,12 @@
 %
 %
 \begin{document}
-	{\pagenumbering{gobble}
+\pagenumbering{gobble}
 	\maketitle
-}
-	\newpage
+\newpage
+%
+\null
+\newpage
 %
 \null
 \vfill
@@ -42,12 +43,13 @@ Edición y composición en XeLaTeX con el paquete Re-\\ledmac de \textsc{Maïaeu
 \end{flushright}
 \newpage
 %
+\pagenumbering{gobble}
 \tableofcontents
 \newpage
 %
 \pagenumbering{arabic}
 \setcounter{page}{1}
-\section*{\textsc{Prefacio}}
+\section*{\centering\textsc{Prefacio}}
 \addcontentsline{toc}{section}{\textsc{Prefacio}}
 %
 \textsc{Jorge Manrique nació} ca. 1440 y murió en abril de 1479. Una noticia de su muerte la transmitió Fernando del Pulgar en su \emph{Crónica de los reyes Católicos}:\par
@@ -60,7 +62,7 @@ El título, \emph{Coplas sobre la muerte de su padre}, resulta un tanto arbitrar
 %
 No se conservaron autógrafos de alguna copla ni testimonios que puedan considerarse apógrafos o idiógrafos. El testimonio más antiguo que contiene la colección de cuarenta coplas es el manuscrito del \emph{Cancionero de Egerton}, y no es sino hasta ca. 1482-83 --seis o siete años tras la redacción y cuatro o cinco tras el fallecimiento del autor-- que aparece en un impreso en carácter de \emph{editio princeps}. Es necesario destacar que los textos de Manrique solo se conservaron disueltos en cancioneros, a diferencia de otro escritor como Luis de Góngora, que habría gozado de \comillas{colecciones} con su obra.\par
 %
-\section*{\textsc{Testimonios}}
+\section*{\centering\textsc{Testimonios}}
 \addcontentsline{toc}{subsection}{\textsc{Testimonios}}
 %
 Para las siglas de los testimonios se adoptaron las utilizadas por \textcite{PérezPriego2017} quien, a su vez, 
@@ -89,10 +91,8 @@ Manuscrito en papel; 21x15cm.; copia del s. XVIII de un manuscrito de fines del 
 {\im} = \emph{Cancionero de fray Íñigo de Mendoza} (BNE, INC/897).
 %
 Impresión incunable a doble columna; tipografía gótica; Zamora, 1483?; 90 fols.; los ff. 67r-70r contienen las coplas con la rúbrica \comillas{Coplas que hizo do\emph{n} jorge manrriq\emph{ue} ala muerte del maestre de santiago do\emph{n} rodrigo manrique su padre}; existen dos ejemplares y se hallan uno, en la Biblioteca Nacional de España (INC/897), y otro, en la Real Biblioteca del Monasterio de San Lorenzo de El Escorial (38-I-22). <\url{https://bdh-rd.bne.es/viewer.vm?id=0000176297\&page=1}>.\par
-\relax
-\vfill
 %
-\section*{\textsc{Criterios de edición}}
+\section*{\centering\textsc{Criterios de edición}}
 \addcontentsline{toc}{subsection}{\textsc{Criterios de edición}}
 %
 Para la fijación del texto se tuvo en cuenta el trabajo filológico de \textcite{Beltrán1991,Beltrán2013} y \textcite{PérezPriego1990,PérezPriego2017} y, conforme a ello, se siguió el subarquetipo \emph{\textbf{α}} del \emph{stemma codicum} construido por el segundo. Descartando el subarquetipo \emph{\textbf{β}}, siendo {\im} su testimonio más representativo\footnoteE{Aunque el subarquetipo \emph{\textbf{β}} contenga otros testimonios útiles para la reconstrucción del arquetipo \emph{\textbf{X}} --esto es, \emph{\textbf{EM6}} y \emph{\textbf{PN1}}--, a efectos prácticos de esta edición liminar se utilizó únicamente {\im} por ser el testimonio más representativo del subarquetipo, según lo estudiaron \textcite{PérezPriego2017} y \textcite{Beltrán1991,Beltrán2013}.}, la filiación de los testimonios se resumiría con el siguiente \emph{stemma} reducido a partir de lo indicado\footnoteE{Para el \emph{stemma} completo \emph{cfr.} \textcite[103]{PérezPriego2017}.}:\par
@@ -154,21 +154,26 @@ El orden de las coplas que se sigue es el de {\eg} que, a su vez, coincide con e
 Constituyen al aparato crítico el orden y rúbricas en los testimonios, el aparato de variantes y las explicaciones adicionales. El tipo de aparato de variantes es negativo. Luego de indicar el pasaje al que corresponde la variante --si se coloca \comillas{\textbf{\char"02016}}, indicará que aún continúa en el mismo pasaje--, se colocará la lección adoptada seguida por el signo \comillas{]} que encierra la lección adoptada, y tras el signo, las lecciones descartadas seguidas por su(s) sigla(s)\footnoteE{Irán en cursiva las siglas y se separarán con comas cada una.}, separada cada unidad por un \comillas{;}. Se eludirán variantes gráficas y de espacio. Las explicaciones contendrán argumentos en torno a las lecciones adoptadas, problemas respecto al estado del testimonio de base y plausibles interpretaciones.\par
 \relax
 %
-\section*{\textsc{Bibliografía}}
+\section*{\centering\textsc{Bibliografía}}
 \addcontentsline{toc}{section}{\textsc{Bibliografía}}
 \nocite{*}
 \printbibliography[heading=none]
 \newpage
 %
-\section*{\raggedleft\textsc{Texto y aparato críticos}}
-\addcontentsline{toc}{section}{\textsc{Texto y aparato críticos}}
+\pagenumbering{gobble}
+\section*{\centering\huge\textsc{\emph{Coplas sobre la muerte de su padre}}}
+\addcontentsline{toc}{section}{\emph{\textsc{Coplas sobre la muerte de su padre}}}
+%
+\section*{\centering\textsc{Con aparato crítico}}
 \newpage
 %
-\section*{\raggedleft\textsc{Conspectus siglorum}}
-\addcontentsline{toc}{section}{\textsc{Conspectus siglorum}}
+\pagenumbering{arabic}
+\setcounter{page}{8}
+\section*{\centering\textsc{Conspectus siglorum}}
+\addcontentsline{toc}{subsection}{\textsc{Conspectus siglorum}}
 %
 \subsection*{\normalsize\textsc{Sigla testimoniorum}}
-\addcontentsline{toc}{subsection}{\textsc{Sigla testimoniorum}}
+\addcontentsline{toc}{subsubsection}{\textsc{Sigla testimoniorum}}
 \vspace*{-2.5pt}
 \begin{itemize}[label=,leftmargin=0.6cm]%
 \item {\eg} = \emph{Cancionero de Egerton}, 1470?-1480?
@@ -180,7 +185,7 @@ Constituyen al aparato crítico el orden y rúbricas en los testimonios, el apar
 \end{itemize}
 %
 \subsection*{\normalsize\textsc{Sigla apparati critici}}
-\addcontentsline{toc}{subsection}{\textsc{Sigla apparati critici}}
+\addcontentsline{toc}{subsubsection}{\textsc{Sigla apparati critici}}
 \vspace*{-2.5pt}
 \begin{itemize}[label=,leftmargin=0.6cm]%
 \item \emph{a. corr.} = ante correctionem.
@@ -200,7 +205,6 @@ Constituyen al aparato crítico el orden y rúbricas en los testimonios, el apar
 \end{itemize} 
 \newpage
 %
-\addcontentsline{toc}{section}{\emph{\textsc{Coplas}}}
 \beginnumbering
 \begin{center}
 		\textbf{[I]}\footnoteA{\textbf{\textsc{Incipit} =} Coplas que fiço don jorje manrriq\emph{ue} sobre la muerte del maestre de santiago don rrodrigo manrriq\emph{ue} su padre {\eg}; Dezir de don jorge manrriq\emph{ue} por la muerte de su padre {\jm}; De don jorge manrique por la muerte de su padre {\rl}; Coplas de do\emph{n} jorge ma\emph{n}riq\emph{ue} a la muerte del maestre don rrod\emph{rig}o ma\emph{n}riq\emph{ue} su padre {\hh}; Coplas que hizo do\emph{n} jorge manrriq\emph{ue} ala muerte del maestre de santiago do\emph{n} rodrigo manrique su padre {\im}.}
@@ -717,8 +721,8 @@ No dexó grandes thesoros\\
 ni \edtext{alcançó}{\lemma{alcanço}\Afootnote{llego {\hh}}} \edtext{gra\emph{n}des}{\Afootnote{muchas {\rl}}} riq\emph{ue}zas\\ 
 ni baxillas,\\
 mas fizo \edtext{guerras a moros}{\Afootnote{guerra a los moros {\delt}, {\mn}, {\im}; gran guerra a moros {\hh}}}\footnoteE{Se siguen las lecciones plurales de {\eg}, porque don Rodrigo Manrique probablemente no participó en una guerra, sino en otras más. Es necesario atender a los datos proporcionados por Fernando del Pulgar en su \emph{Claros varones de Castilla} (ca. 1480-1486) que, en un capítulo dedicado al maestre, el XIII, titulado «El Maestre Don Rodrigo Manrrique, Conde de Paredes» --que ya citó \textcite[cap. IX]{MenendezYPelayo1944}--, los recoge con gran detalle. A continuación, el pasaje según la edición crítica de Tate:\par
-«\emph{En las batallas ⁊ muchos recuentros que ovo con moros ⁊ con christianos este cavallero fue el que, mostrando grand esfuerço a los suyo, fería primero en los contrarios. E las gentes de su conpañía, visto el efuerço de su capitán, todos le seguían ⁊ cobravan osadía de pelear. Tenía tan grand conoscimiento de las cosas del canpo, ⁊ proveí[a]las en tal manera que donde él fue principal capitán nunca puso su gente en logar do se oviese de retraer, porque bolver las espaldas al enemigo era tan ageno que su ánimo que elegía antes de recebir la muerte peleando que salvar la vida huyendo.}\par 
-»\emph{Este cavallero osó acometer grandes fazañas. Especialmente escaló una noche la cibdad de Huesca, que es del reino de Granada. E como quier que subiendo el escala los suyos fueron sentidos de los moros, ⁊ fueron algunos derribados del adarve ⁊ feridos en la subida} [...] \emph{subieron el muro peleando ⁊ no fallescieron de sus fuerças defendiéndolo, aunque veían los unos derramar su sangre, los otros caer de la cerca. E de esta manera, matando de los moros ⁊ muriendo de los suyos, este capitán, ferido en el braço de una saeta, peleando entró la cibdad e retroxo los moros fasta que los cercó en la fortaleza.} [...] \emph{Este cavallero duró ⁊ fizo durar a los suyos conbatiendo los moros que tenía cercados, e resistiendo a los moros que le tenía cercado por espacio de dos días, fasta que vino el socorro }[...] \emph{Ganada aquella cibdad, dexado en ella por capitán a un su hermano llamado Gómes Manrrique, ganó otras fortalezas en la comarca. Socorrió muchas vezes algunas cibdades ⁊ villa ⁊ capitanes christianos en tienpo de estrema necesidad. ⁊ fizo tanta guerra en aquellas tierras que en el reino de Granada el nonbre de Rodrigo Ma[n]rrique fue mucho tienpo a los moros grand terror.}»}\\
+«En las batallas ⁊ muchos recuentros que ovo con moros ⁊ con christianos este cavallero fue el que, mostrando grand esfuerço a los suyo, fería primero en los contrarios. E las gentes de su conpañía, visto el efuerço de su capitán, todos le seguían ⁊ cobravan osadía de pelear. Tenía tan grand conoscimiento de las cosas del canpo, ⁊ proveí[a]las en tal manera que donde él fue principal capitán nunca puso su gente en logar do se oviese de retraer, porque bolver las espaldas al enemigo era tan ageno que su ánimo que elegía antes de recebir la muerte peleando que salvar la vida huyendo.\par 
+»Este cavallero osó acometer grandes fazañas. Especialmente escaló una noche la cibdad de Huesca, que es del reino de Granada. E como quier que subiendo el escala los suyos fueron sentidos de los moros, ⁊ fueron algunos derribados del adarve ⁊ feridos en la subida [...] subieron el muro peleando ⁊ no fallescieron de sus fuerças defendiéndolo, aunque veían los unos derramar su sangre, los otros caer de la cerca. E de esta manera, matando de los moros ⁊ muriendo de los suyos, este capitán, ferido en el braço de una saeta, peleando entró la cibdad e retroxo los moros fasta que los cercó en la fortaleza. [...] Este cavallero duró ⁊ fizo durar a los suyos conbatiendo los moros que tenía cercados, e resistiendo a los moros que le tenía cercado por espacio de dos días, fasta que vino el socorro [...] Ganada aquella cibdad, dexado en ella por capitán a un su hermano llamado Gómes Manrrique, ganó otras fortalezas en la comarca. Socorrió muchas vezes algunas cibdades ⁊ villa ⁊ capitanes christianos en tienpo de estrema necesidad. ⁊ fizo tanta guerra en aquellas tierras que en el reino de Granada el nonbre de Rodrigo Ma[n]rrique fue mucho tienpo a los moros grand terror».}\\
 gana\emph{n}do sus fortalezas \edtext{}{\Afootnote[nosep]{fortalezas [y villas] \emph{eras.} {\eg}}}\\
 y sus villas;\par
 y en las lides que vençió,\\
@@ -745,6 +749,7 @@ fizo tratos ta\emph{n} ho\emph{n}rrosos\\
 que le diero\emph{n} \edtext{aún}{\lemma{avn}\Afootnote{muy {\im}}} más \edtext{t\emph{ie}rras}{\Afootnote{tierra {\gamm}, {\im}}}\\
 \edtext{que}{\Afootnote{quel {\jm}}} tenía.\par
 \pend
+\repage
 %
 \begin{center}
 	\textbf{[XXXI]}\footnoteA{\textbf{[XXXI]} XIX en {\jm}.}
@@ -817,6 +822,7 @@ por la fama,\\
 para sofrir \edtext{esta}{\Afootnote{aquesta {\hh}}} afrenta\\
 q\emph{ue} \edtext{vos}{\Afootnote{os {\im}}} llama.\par                        
 \pend
+\repage
 %
 \begin{center}
 	\textbf{[XXXV]}\footnoteA{\textbf{[XXXV]} XXIII en {\jm}.}
@@ -929,7 +935,7 @@ su memoria.\par
 \endnumbering
 \enpage
 %
-\section*{\textsc{Apéndice}}
+\section*{\centering\textsc{Apéndice}}
 \addcontentsline{toc}{section}{\textsc{Apéndice}}
 %
 Coplas apócrifas o póstumas en la \emph{Glosa Famossisima} de Alonso de Cervantes, ubicadas entre las coplas XXIV y XXV. Texto fijado por \textcite{Foulché-Delbosc1902}.\par\vspace{5pt}
