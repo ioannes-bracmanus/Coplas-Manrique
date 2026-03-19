@@ -1,6 +1,6 @@
 \documentclass[11pt,twoside]{article}
 \usepackage{fontspec}
-\usepackage[paperwidth=17.50cm,paperheight=25.00cm,top=2.20cm,inner=2.20cm,outer=1.65cm,bottom=1.95cm]{geometry}
+\usepackage[paperwidth=17.50cm,paperheight=25.00cm,top=2.20cm,inner=2.65cm,outer=1.65cm,bottom=2.20cm]{geometry}
 \usepackage{polyglossia}
 \setdefaultlanguage{spanish}
 \setotherlanguage[variant=ancient]{greek}
@@ -28,6 +28,9 @@
 \newcommand{\etag}{\emph{\textbf{ε}}}
 %
 \newcommand{\head}[1]{\def\mihead{#1}\thispagestyle{empty}} \def\mihead{} \newpagestyle{editio}{\sethead[\thepage][\ifx\mihead\empty\else\mihead\fi][]{}{\ifx\mihead\empty\else\mihead\fi}{\thepage}} \pagestyle{editio}
+%
+\setlength{\linenumsep}{-65pt}
+\linenummargin{right}
 %
 %
 \begin{document}
@@ -164,7 +167,7 @@ Constituyen al aparato crítico el orden y rúbricas en los testimonios, el apar
 \printbibliography[heading=none]
 \newpage
 %
-\head{}
+\head{\emph{\textsc{Coplas sobre la muerte de su padre}}}
 \pagenumbering{gobble}
 \section*{\centering\huge\textsc{\emph{Coplas sobre la muerte de su padre}}}
 \addcontentsline{toc}{section}{\emph{\textsc{Coplas sobre la muerte de su padre}}}
@@ -211,7 +214,6 @@ Constituyen al aparato crítico el orden y rúbricas en los testimonios, el apar
 \newpage
 %
 \addcontentsline{toc}{subsection}{\emph{\textsc{Coplas}}}
-\head{\emph{\textsc{Coplas sobre la muerte de su padre}}}
 \beginnumbering
 \begin{center}
 		\textbf{I}\footnoteA{\textbf{\textsc{Incipit} =} Coplas que fiço don jorje manrriq\emph{ue} sobre la muerte del maestre de santiago don rrodrigo manrriq\emph{ue} su padre {\eg}; Dezir de don jorge manrriq\emph{ue} por la muerte de su padre {\jm}; De don jorge manrique por la muerte de su padre {\rl}; Coplas de do\emph{n} jorge ma\emph{n}riq\emph{ue} a la muerte del maestre don rrod\emph{rig}o ma\emph{n}riq\emph{ue} su padre {\hh}; Coplas que hizo do\emph{n} jorge manrriq\emph{ue} ala muerte del maestre de santiago do\emph{n} rodrigo manrique su padre {\im}.}
@@ -520,6 +522,7 @@ que tañían?\\
 aquellas ropas \edtext{trepadas}{\Afootnote{japadas {\jm}; chapadas {\rl}, {\etag}, {\im}}}\\
 que \edtext{traían}{\lemma{trayan}\Afootnote{vestian {\etag}}}?\par
 \pend
+\repage
 %
 \begin{center}
 	\textbf{XVIII}\footnoteA{\textbf{XVIII} XXX en {\jm}.}
