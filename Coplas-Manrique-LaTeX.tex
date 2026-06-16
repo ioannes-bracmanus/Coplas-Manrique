@@ -1,12 +1,14 @@
 \documentclass[11pt,twoside]{article}
 \usepackage{fontspec}
-\usepackage[paperwidth=17.50cm,paperheight=25.00cm,top=2.20cm,inner=2.65cm,outer=1.65cm,bottom=2.20cm,heightrounded]{geometry}
-\usepackage[center,info,cross,a4]{crop}
+\usepackage[paperwidth=16.50cm,paperheight=23.00cm,top=2.20cm,inner=2.65cm,outer=1.90cm,bottom=2.20cm]{geometry}
+\usepackage{ragged2e}
+\usepackage{mparhack}
+\usepackage[a4,cam,center]{crop}
 \crop[cam]
 \usepackage{polyglossia}
 \setdefaultlanguage{spanish}
 \setotherlanguage[variant=ancient]{greek}
-\usepackage{editio-critica}
+\usepackage{editionibus-criticis}
 \usepackage{lettrine}
 %
 \title{\huge\textbf{COPLAS SOBRE LA MUERTE DE SU PADRE}}
@@ -17,8 +19,6 @@
 %
 \usepackage{tikz}
 \usetikzlibrary{trees}
-%
-\Xlemmaseparator{:}
 %CONSPECTVS SIGLORVM
 \newcommand{\eg}{{\emph{\textbf{LB3}}}}
 \newcommand{\jm}{\emph{\textbf{82*JM}}}
@@ -30,9 +30,11 @@
 \newcommand{\delt}{\emph{\textbf{δ}}}
 \newcommand{\etag}{\emph{\textbf{ε}}}
 %
-%
-\setlength{\linenumsep}{-65pt}
-\linenummargin{right}
+\foottype[T]{quad}
+\renewcommand{\thefootT}{}
+%\footindent[T]{none}
+\linenummargin{outer}
+\nummarginsep{}{-60pt}
 %
 %
 \begin{document}
@@ -62,7 +64,7 @@ Edición y composición en XeLaTeX con el paquete\\ Reledmac de Maïaeul Rouquet
 %
 \noindent\textsc{Jorge Manrique nació} ca. 1440 y murió en abril de 1479. Una noticia de su muerte la transmitió Fernando del Pulgar en su \emph{Crónica de los reyes Católicos}:\par
 %
-\comillas{... peleaban los más días con el marqués de Villena e con su gente, e había entre ellos algunos recuentros. En uno de los quales, el capitán don Jorge Manrique se metió con tanta osadía entres los enemigos que, por no ser visto de los suyos para que fuera socorrido, le firieron de muchos colpes, e murió peleando cerca de las puertas del castillo de Garcimuñoz, donde acaeció aquella pelea, en la qual murieron algunos escuderos e peones de la una e la otra parte.}\footnoteE{[De la guerra que se fizo contra el marqués de Villena en Escalona y en el Marquesado]. En la ed. de Carriazo, aquí utilizada, vol. I, se ubica en la pág. 358; en la \emph{editio princeps}, atribuida a Nebrija, de 1565, en el cap. C, f. 120r; en la ed. de 1780 (Valencia), en \comillas{Segunda parte}, cap. LXXXII, pág. 146.}\par
+\comillas{... peleaban los más días con el marqués de Villena e con su gente, e había entre ellos algunos recuentros. En uno de los quales, el capitán don Jorge Manrique se metió con tanta osadía entres los enemigos que, por no ser visto de los suyos para que fuera socorrido, le firieron de muchos colpes, e murió peleando cerca de las puertas del castillo de Garcimuñoz, donde acaeció aquella pelea, en la qual murieron algunos escuderos e peones de la una e la otra parte.}\footE{[De la guerra que se fizo contra el marqués de Villena en Escalona y en el Marquesado]. En la ed. de Carriazo, aquí utilizada, vol. I, se ubica en la pág. 358; en la \emph{editio princeps}, atribuida a Nebrija, de 1565, en el cap. C, f. 120r; en la ed. de 1780 (Valencia), en \comillas{Segunda parte}, cap. LXXXII, pág. 146.}\par
 %
 Las \emph{Coplas sobre la muerte de su padre} son una \comillas{colección} de coplas compuestas y dedicadas a don Rodrigo Manrique, padre del autor y maestre de la Orden de Santiago, hacia fines de 1476, tras su muerte. El texto presenta una figura ensalzada del maestre como victorioso guerrero que \comillas{fizo guerras a moros} --\emph{bellator}--, hombre virtuoso y católico honrado. Utiliza la \comillas{copla de pie quebrado} o \comillas{sextina manriqueña} --cuatro octosílabos y dos tetrasílabos con rimas consonantes--, lenguaje llano y culto, y posee erudición histórica, filosófica y teológica.\par
 %
@@ -103,7 +105,7 @@ Impresión incunable a doble columna con tipografía gótica, impreso en Zamora,
 \section*{\centering\textsc{Criterios de edición}}
 \addcontentsline{toc}{subsection}{\textsc{Criterios de edición}}
 %
-\noindent Para la fijación del texto se tuvo en cuenta el trabajo filológico de \textcite{Beltrán1991,Beltrán2013} y \textcite{PérezPriego1990,PérezPriego2017} y, conforme a ello, se siguió el subarquetipo \emph{\textbf{α}} del \emph{stemma codicum} construido por el segundo. Descartando el subarquetipo \emph{\textbf{β}}, siendo {\im} su testimonio más representativo\footnoteE{Aunque el subarquetipo \emph{\textbf{β}} contenga otros testimonios útiles para la reconstrucción del arquetipo \emph{\textbf{X}} --esto es, \emph{\textbf{EM6}} y \emph{\textbf{PN1}}--, a efectos prácticos de esta edición liminar se utilizó únicamente {\im} por ser el testimonio más representativo del subarquetipo, según lo estudiaron \textcite{PérezPriego2017} y \textcite{Beltrán1991,Beltrán2013}.}, la filiación de los testimonios se resumiría con el siguiente \emph{stemma} reducido a partir de lo indicado\footnoteE{Para el \emph{stemma} completo \emph{cfr.} \textcite[103]{PérezPriego2017}.}:\par
+\noindent Para la fijación del texto se tuvo en cuenta el trabajo filológico de \textcite{Beltrán1991,Beltrán2013} y \textcite{PérezPriego1990,PérezPriego2017} y, conforme a ello, se siguió el subarquetipo \emph{\textbf{α}} del \emph{stemma codicum} construido por el segundo. Descartando el subarquetipo \emph{\textbf{β}}, siendo {\im} su testimonio más representativo\footE{Aunque el subarquetipo \emph{\textbf{β}} contenga otros testimonios útiles para la reconstrucción del arquetipo \emph{\textbf{X}} --esto es, \emph{\textbf{EM6}} y \emph{\textbf{PN1}}--, a efectos prácticos de esta edición liminar se utilizó únicamente {\im} por ser el testimonio más representativo del subarquetipo, según lo estudiaron \textcite{PérezPriego2017} y \textcite{Beltrán1991,Beltrán2013}.}, la filiación de los testimonios se resumiría con el siguiente \emph{stemma} reducido a partir de lo indicado\footE{Para el \emph{stemma} completo \emph{cfr.} \textcite[103]{PérezPriego2017}.}:\par
 %
 	\begin{figure}[ht]
 		\centering
@@ -138,7 +140,7 @@ Impresión incunable a doble columna con tipografía gótica, impreso en Zamora,
 %
 Se utilizó como texto base el testimonio {\eg} por portar este lecciones no contaminadas, conservar el castellano de la época, y por ser cercano a la redacción de las coplas.\par
 %
-Criterios de presentación gráfica\footnoteE{Las modificaciones no aplican al aparato de variantes, a excepción de \emph{nn} y las grafías dobles.}:
+Criterios de presentación gráfica\footE{Las modificaciones no aplican al aparato de variantes, a excepción de \emph{nn} y las grafías dobles.}:
 %
 \begin{itemize}[label=--]%
 \item \emph{b}--\emph{v} = se conserva la alternancia.
@@ -159,7 +161,7 @@ Las contracciones se separan sin indicación alguna. Las grafías en cursiva cor
 %
 El orden de las coplas que se sigue es el de {\eg} que, a su vez, coincide con el orden y conclusiones de \textcite{Senabre1983}, \textcite{Palumbo1983}, \textcite{Orduna1967}, \textcite{Beltrán1991,Beltrán2013}, \textcite{PérezPriego1990,PérezPriego2017} y \textcite{Foulché-Delbosc1902}.\par
 %
-Constituyen al aparato crítico el orden y rúbricas en los testimonios, el aparato de variantes y las explicaciones adicionales. El tipo de aparato de variantes es negativo. Luego de indicar el pasaje al que corresponde la variante --si se coloca \comillas{\textbf{\char"02016}}, indicará que aún continúa en el mismo pasaje--, se colocará la lección adoptada seguida por el signo \comillas{:} que encierra la lección adoptada, y tras el signo, las lecciones descartadas seguidas por su(s) sigla(s)\footnoteE{Irán en cursiva las siglas y se separarán con comas cada una.}, separada cada unidad por un \comillas{;}. Se eludirán variantes gráficas y de espacio. Las explicaciones contendrán argumentos en torno a las lecciones adoptadas, problemas respecto al estado del testimonio de base y plausibles interpretaciones.\par
+Constituyen al aparato crítico el orden y rúbricas en los testimonios, el aparato de variantes y las explicaciones adicionales. El tipo de aparato de variantes es negativo. Luego de indicar el pasaje al que corresponde la variante --si se coloca \comillas{\textbf{\char"02016}}, indicará que aún continúa en el mismo pasaje--, se colocará la lección adoptada seguida por el signo \comillas{:} que encierra la lección adoptada, y tras el signo, las lecciones descartadas seguidas por su(s) sigla(s)\footE{Irán en cursiva las siglas y se separarán con comas cada una.}, separada cada unidad por un \comillas{;}. Se eludirán variantes gráficas y de espacio. Las explicaciones contendrán argumentos en torno a las lecciones adoptadas, problemas respecto al estado del testimonio de base y plausibles interpretaciones.\par
 \repage
 %
 \head{\textsc{Bibliografía}}
@@ -178,7 +180,7 @@ Constituyen al aparato crítico el orden y rúbricas en los testimonios, el apar
 \newpage
 %
 \pagenumbering{Roman}
-\setcounter{page}{8}
+\setcounter{page}{9}
 \section*{\centering\textsc{Conspectus siglorum}}
 \addcontentsline{toc}{subsection}{\textsc{Conspectus siglorum}}
 %
@@ -219,12 +221,12 @@ Constituyen al aparato crítico el orden y rúbricas en los testimonios, el apar
 \pagenumbering{arabic}
 \setcounter{page}{1}
 \addcontentsline{toc}{subsection}{\emph{\textsc{Coplas}}}
-\beginnumbering
+\bnum
 \begin{center}
-		\textbf{I}\footnoteA{\textbf{\textsc{Encabezamiento}:} Coplas que fiço don jorje manrriq\emph{ue} sobre la muerte del maestre de santiago don rrodrigo manrriq\emph{ue} su padre {\eg}; Dezir de don jorge manrriq\emph{ue} por la muerte de su padre {\jm}; De don jorge manrique por la muerte de su padre {\rl}; Coplas de do\emph{n} jorge ma\emph{n}riq\emph{ue} a la muerte del maestre don rrod\emph{rig}o ma\emph{n}riq\emph{ue} su padre {\hh}; Coplas que hizo do\emph{n} jorge manrriq\emph{ue} ala muerte del maestre de santiago do\emph{n} rodrigo manrique su padre {\im}.}
+		\textbf{I}\footT{\textbf{\textsc{Encabezamiento}:} Coplas que fiço don jorje manrriq\emph{ue} sobre la muerte del maestre de santiago don rrodrigo manrriq\emph{ue} su padre {\eg}; Dezir de don jorge manrriq\emph{ue} por la muerte de su padre {\jm}; De don jorge manrique por la muerte de su padre {\rl}; Coplas de do\emph{n} jorge ma\emph{n}riq\emph{ue} a la muerte del maestre don rrod\emph{rig}o ma\emph{n}riq\emph{ue} su padre {\hh}; Coplas que hizo do\emph{n} jorge manrriq\emph{ue} ala muerte del maestre de santiago do\emph{n} rodrigo manrique su padre {\im}.}
 \end{center}
-\pstart
-\lettrine[lines=2,nindent=2pt]{R}{\textsc{ecuerde}}\footnoteE{\comillas{Recuerde} no tiene la acepción de \comillas{traer a la memoria}, sino la de \comillas{despertar} y, para ello, el \emph{Tesoro de la lengua castellana} de \textcite{Covarrubias1611} registra para el vocablo \emph{recordar} \comillas{despertar el que duerme, o boluer en acuerdo, del verbo recordor}. Posteriormente se registró el significado \comillas{Metaphoricamente vale despertar al que está dormido} (\emph{Autoridades}, 2ª acepción).} \textsc{el alma} dormida,\\
+\nstart
+\lettrine[lines=2,nindent=2pt]{R}{\textsc{ecuerde}}\footE{\comillas{Recuerde} no tiene la acepción de \comillas{traer a la memoria}, sino la de \comillas{despertar} y, para ello, el \emph{Tesoro de la lengua castellana} de \textcite{Covarrubias1611} registra para el vocablo \emph{recordar} \comillas{despertar el que duerme, o boluer en acuerdo, del verbo recordor}. Posteriormente se registró el significado \comillas{Metaphoricamente vale despertar al que está dormido} (\emph{Autoridades}, 2ª acepción).} \textsc{el alma} dormida,\\
 avive el seso y despierte\\
 contenplando\\
 cómo se pasa la vida,\\
@@ -234,16 +236,16 @@ q\emph{uá}nd presto se va el plazer,\\
 cómo después de acordado\\
 da dolor,\\
 cómo a nuestro paresçer\\
-\edtext{q\emph{ua}lq\emph{uie}ra}{\Afootnote{qualqujer {\eg}}} tie\emph{n}po pasado \edtext{}{\Afootnote[nosep]{sapado \emph{err.} {\eg}}}\\
+\footA{q\emph{ua}lq\emph{uie}ra}{qualqujer {\eg}} tie\emph{n}po pasado \footA{}{sapado \emph{err.} {\eg}}\\
 fue mejor.\par
-\pend
+\nend
 %
 \begin{center}
 		\textbf{II}
 \end{center}
-\pstart
-\edtext{Y pues}{\lemma{y pues}\Afootnote{Pues si {\delt}}} vemos lo presente\\
-cómo en un pu\emph{n}to \edtext{se}{\Afootnote{\emph{om.} {\im}}} es ido\\
+\nstart
+\footA{Y pues \lemma{y pues}}{Pues si {\delt}} vemos lo presente\\
+cómo en un pu\emph{n}to se\footA{se}{\emph{om.} {\im}} es ido\\
 y acabado,\\
 si judgamos sabiamente,\\
 daremos lo no venido\\
@@ -254,12 +256,12 @@ lo que espera,\\
 más que duró lo q\emph{ue} vio,\\
 pues que todo ha de pasar\\
 por tal manera.\par
-\pend
+\nend
 %
 \begin{center}
-		\textbf{III}\footnoteA{\textbf{III} conpara {\eg}.}
+		\textbf{III}\footT{\textbf{III} conpara {\eg}.}
 \end{center}
-\pstart
+\nstart
 N\emph{uest}ras vidas son los ríos\\
 que van a dar en la mar\\
 que es el morir;\\
@@ -269,543 +271,542 @@ y consumir.\par
 Allí los ríos cabdales,\\
 allí los otros, medianos,\\
 y más chicos,\\
-\edtext{y llegados}{\Afootnote{alleguados {\jm}; allegados {\im}}}\footnoteE{\textcite{PérezPriego2017} sugiere que la lección \emph{alleguados}, probablemente a través de la contaminación de {\jm} al subarquetipo \emph{\textbf{β}}, habría generado la lección \emph{allegados}.}, son iguales,\\
+\footA{y llegados}{alleguados {\jm}; allegados {\im}}\footE{\textcite{PérezPriego2017} sugiere que la lección \emph{alleguados}, probablemente a través de la contaminación de {\jm} al subarquetipo \emph{\textbf{β}}, habría generado la lección \emph{allegados}.}, son iguales,\\
 los que bive\emph{n} por sus manos\\
 y los ricos.\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{IV}\footnoteA{\textbf{IV} ynuoca {\eg}; inuocaçion {\jm}; Inuocacion {\rl}.}
+	\textbf{IV}\footT{\textbf{IV} ynuoca {\eg}; inuocaçion {\jm}; Inuocacion {\rl}.}
 \end{center}
-\pstart
+\nstart
 Dexo las invocaçiones\\
 de los famosos poetas\\
 y oradores;\\
-no \edtext{curo}{\Afootnote{cureys {\eg}}} de sus \edtext{ficçiones}{\Afootnote{afficciones {\jm}}},\\
-\edtext{que traen}{\Afootnote{porque traen {\hh}}} yervas secretas\\
+no \footA{curo}{cureys {\eg}} de sus \footA{ficçiones}{afficciones {\jm}},\\
+\footA{que traen}{porque traen {\hh}} yervas secretas\\
 sus sabores.\par
 Aquel solo me encomie\emph{n}do,\\
-aq\emph{ue}l solo invoco yo \edtext{}{\Afootnote[nosep]{de verdat \emph{a. corr.} {\eg}}}\\
-de verdad\footnoteE{En {\eg} se redactó \comillas{[de ver] dat} luego de \comillas{ynuoco yo}. Quizá el redactor inicial --o un secundario (\emph{cfr. gl.} XL)-- tachó el fragmento por la errónea ubicación y corrigió \comillas{de verdad} en un pequeño espacio entre los vv. 44 y 46. Puesto que se modificó \emph{verdat} por \emph{verdad} en la corrección, para la fijación se reemplazó \emph{t} en \emph{deydat} por \emph{d} para conservar la rima.} \edtext{}{\Afootnote[nosep]{\emph{p. corr.} {\eg}}},\\
-que en este mu\emph{n}do \edtext{bivie\emph{n}do}{\lemma{biuie\emph{n}do}\Afootnote{vinjendo {\hh}}},\\
+aq\emph{ue}l solo invoco yo \footA{}{de verdat \emph{a. corr.} {\eg}}\\
+de verdad\footE{En {\eg} se redactó \comillas{[de ver] dat} luego de \comillas{ynuoco yo}. Quizá el redactor inicial --o un secundario (\emph{cfr. gl.} XL)-- tachó el fragmento por la errónea ubicación y corrigió \comillas{de verdad} en un pequeño espacio entre los vv. 44 y 46. Puesto que se modificó \emph{verdat} por \emph{verdad} en la corrección, para la fijación se reemplazó \emph{t} en \emph{deydat} por \emph{d} para conservar la rima.} \footA{}{\emph{p. corr.} {\eg}},\\
+que en este mu\emph{n}do \footA{bivie\emph{n}do \lemma{biuie\emph{n}do}}{vinjendo {\hh}},\\
 el mu\emph{n}do no conosçió\\
 su deidad.\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{V}\footnoteA{\textbf{V} ap[lica] y [co]\emph{n}para \emph{ras.} {\eg}.}
+	\textbf{V}\footT{\textbf{V} ap[lica] y [co]\emph{n}para \emph{ras.} {\eg}.}
 	\end{center}
-\pstart
+\nstart
 Este mu\emph{n}do es el camino\\
 para el otro, que es morada\\
 sin pesar,\\
 mas cunple tener bue\emph{n} tino\\
-para andar \edtext{esta jornada}{\Afootnote{este camino {\jm}}}\\
+para andar \footA{esta jornada}{este camino {\jm}}\\
 sin errar.\par
 Partimos q\emph{ua}ndo nasçemos,\\
-andamos \edtext{q\emph{ua}ndo}{\Afootnote{mientra {\delt}; qua\emph{n}to {\hh}}} bivimos\\
-y \edtext{llegamos}{\Afootnote{allegamos {\im}}}\\
+andamos \footA{q\emph{ua}ndo}{mientra {\delt}; qua\emph{n}to {\hh}} bivimos\\
+y \footA{llegamos}{allegamos {\im}}\\
 al tienpo que feneçemos;\\
 así que, q\emph{ua}ndo morimos,\\
 descansamos.\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{VI}\footnoteA{\textbf{VI} p\emph{r}osigue {\eg}.}
+	\textbf{VI}\footT{\textbf{VI} p\emph{r}osigue {\eg}.}
 \end{center}
-\pstart
-\edtext{Este}{\lemma{este}\Afootnote{y este {\jm}}} mu\emph{n}do bueno fue\\
-si bie\emph{n} \edtext{usásemos}{\lemma{vsasemos}\Afootnote{vsamos {\hh}}} de él\\
+\nstart
+\footA{Este \lemma{este}}{y este {\jm}} mu\emph{n}do bueno fue\\
+si bie\emph{n} \footA{usásemos \lemma{vsasemos}}{vsamos {\hh}} de él\\
 como devemos,\\
 porque segu\emph{n}d n\emph{uest}ra fe,\\
 es para ganar aquel\\
 que atendemos;\par
-\edtext{y}{\Afootnote{\emph{om.} {\rl}}} aun aq\emph{ue}l fijo de Dios,\\
+\footA{y}{\emph{om.} {\rl}} aun aq\emph{ue}l fijo de Dios,\\
 para sobirnos al çielo\\
 desçendió\\
-a nasçer \edtext{acá}{\lemma{aca}\Afootnote{aqua {\jm}}} entre nos\\
+a nasçer \footA{acá \lemma{aca}}{aqua {\jm}} entre nos\\
 \emph{e} bevir en este suelo\\
 do murió.\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{VII}\footnoteA{\textbf{VII} XXV en {\jm}; XIII en {\rl}.}
+	\textbf{VII}\footT{\textbf{VII} XXV en {\jm}; XIII en {\rl}.}
 \end{center}
-\pstart
+\nstart
 Si fuese en n\emph{uest}ro poder\\
-\edtext{tornar}{\Afootnote{hazer {\rl}}} la cara fermosa\\
+\footA{tornar}{hazer {\rl}} la cara fermosa\\
 corporal\\
 como podemos fazer\\
-al \edtext{ánima}{\lemma{anima}\Afootnote{alma {\rl}, {\hh}}} \edtext{glorïosa}{\lemma{gloriosa}\Afootnote{tan gloriosa {\rl}, {\hh}}}\\
+al \footA{ánima \lemma{anima}}{alma {\rl}, {\hh}} \footA{glorïosa \lemma{gloriosa}}{tan gloriosa {\rl}, {\hh}}\\
 angelical,\par
 ¡qué dilige\emph{n}çia ta\emph{n} biva\\
-\edtext{toviéramos}{\lemma{touieramos}\Afootnote{terniamos {\jm}}} toda ora\\
+\footA{toviéramos \lemma{touieramos}}{terniamos {\jm}} toda ora\\
 y tan presta\\
 en conponer la cativa,\\
 dexándonos la señora\\
 desconpuesta!\par
-\pend
-\repage
+\nend
 %
 \begin{center}
-	\textbf{VIII}\footnoteA{\textbf{VIII} VII en \rl.}
+	\textbf{VIII}\footT{\textbf{VIII} VII en \rl.}
 \end{center}
-\pstart
+\nstart
 Ved de q\emph{uá}nd poco balor\\
 son las cosas tras q\emph{ue} andamos\\
 y corremos\\
 que, en este mu\emph{n}do traidor,\\
-\edtext{aun}{\lemma{avn}\Afootnote{cavn {\hh}}} p\emph{ri}m\emph{er}o que muramos\\
+\footA{aun \lemma{avn}}{cavn {\hh}} p\emph{ri}m\emph{er}o que muramos\\
 las perdemos:\par
 de ellas desfaze la hedad,\\
 de ellas, casos desastrados\\
-q\emph{ue} \edtext{acaesçen}{\Afootnote{contecen {\im}}},\\
-\edtext{y de ellas, por calidad}{\lemma{y dellas por calidad}\Afootnote{dellas por su calidad {\delt}, {\hh}, {\im}}},\\
+q\emph{ue} \footA{acaesçen}{contecen {\im}},\\
+\footA{y de ellas, por calidad \lemma{y dellas por calidad}}{dellas por su calidad {\delt}, {\hh}, {\im}},\\
 en los más altos estados\\
 desfallesçen.\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{IX}\footnoteA{\textbf{IX} VIII en {\jm}, {\rl}.}
+	\textbf{IX}\footT{\textbf{IX} VIII en {\jm}, {\rl}.}
 \end{center}
-\pstart
-\edtext{Dezidme}{\lemma{dezidme}\Afootnote{Dezimos {\im}}}, la fermosura,\\
+\nstart
+\footA{Dezidme \lemma{dezidme}}{Dezimos {\im}}, la fermosura,\\
 la gentil frescura y tez\\
 de la cara,\\
 la color y la blancura,\\
 q\emph{ua}ndo viene la vejez,\\
 ¿quál se para?\par
-Las \edtext{mañas}{\Afootnote{manos {\jm}; maneras {\rl}}} y ligereza\\
+Las \footA{mañas}{manos {\jm}; maneras {\rl}} y ligereza\\
 y la fuerça corporal\\
 de joventud,\\
 todo se torna graveza\\
-q\emph{ua}ndo llega al arraval \edtext{}{\Afootnote[nosep]{a la hedat \emph{err.} {\eg}}}\\
+q\emph{ua}ndo llega al arraval \footA{}{a la hedat \emph{err.} {\eg}}\\
 de senetud.\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{X}\footnoteA{\textbf{X} IX en {\jm}, {\rl}.}
+	\textbf{X}\footT{\textbf{X} IX en {\jm}, {\rl}.}
 \end{center}
-\pstart
+\nstart
 Pues la sangre d\emph{e} los godos,\\
 y el linaje y la nobleza\\
 tan creçida,\\
 ¡por q\emph{uá}ntas vías y modos\\
 se sume su grande alteza\\
 en esta vida!\par
-Unos, por poco \edtext{valer}{\Afootnote{valor {\hh}}},\\
-¡por q\emph{uá}nd \edtext{baxos}{\Afootnote{varios {\jm}; baros {\rl}}} y abatidos\\
+Unos, por poco \footA{valer}{valor {\hh}},\\
+¡por q\emph{uá}nd \footA{baxos}{varios {\jm}; baros {\rl}} y abatidos\\
 que los tiene\emph{n}!\\
-\edtext{Y otros, por poco tener}{\lemma{y otros por poco}\Afootnote{yaotros por no {\jm}; otros por no {\rl}; y otros por no {\hh}; otros que por no {\mn}, {\im}}},\\
+\footA{Y otros, por poco tener \lemma{y otros por poco}}{yaotros por no {\jm}; otros por no {\rl}; y otros por no {\hh}; otros que por no {\mn}, {\im}},\\
 con oficios no devidos\\
-se \edtext{ma\emph{n}tiene\emph{n}}{\Afootnote{sostienen {\im}}}.\par
-\pend
+se \footA{ma\emph{n}tiene\emph{n}}{sostienen {\im}}.\par
+\nend
 %
 \begin{center}
-	\textbf{XI}\footnoteA{\textbf{XI} X en {\jm}, {\rl}.}
+	\textbf{XI}\footT{\textbf{XI} X en {\jm}, {\rl}.}
 \end{center}
-\pstart
-Los estados y \edtext{riqueza}{\Afootnote{riquezas {\delt}, {\hh}}}\\
-que nos \edtext{dexen}{\Afootnote{dexan {\jm}}} a deshora,\\
-¿quié\emph{n} \edtext{lo}{\Afootnote{\emph{om.} {\eg}}} dubda?\\
-\edtext{No}{\lemma{no}\Afootnote{nos {\rl}}} les pidamos \edtext{firmeza}{\Afootnote{firmezas {\jm}, {\hh}}},\\
-\edtext{pues que}{\Afootnote{por que {\jm}}} son de una señora\\
+\nstart
+Los estados y \footA{riqueza}{riquezas {\delt}, {\hh}}\\
+que nos \footA{dexen}{dexan {\jm}} a deshora,\\
+¿quié\emph{n} \footA{lo}{\emph{om.} {\eg}} dubda?\\
+\footA{No \lemma{no}}{nos {\rl}} les pidamos \footA{firmeza}{firmezas {\jm}, {\hh}},\\
+\footA{pues que}{por que {\jm}} son de una señora\\
 que se muda:\par
 que bienes son de Fortuna\\
-que \edtext{rebuelve}{\lemma{rebuelue}\Afootnote{rebueluen {\delt}}} co\emph{n} su rueda\\
+que \footA{rebuelve \lemma{rebuelue}}{rebueluen {\delt}} co\emph{n} su rueda\\
 presurosa,\\
 la qual no puede ser una\\
-ni \edtext{estar}{\Afootnote{ser {\im}}} estable ni q\emph{ue}da\\
+ni \footA{estar}{ser {\im}} estable ni q\emph{ue}da\\
 en una cosa.\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{XII}\footnoteA{\textbf{XII} XI en {\jm}, {\rl}.}
+	\textbf{XII}\footT{\textbf{XII} XI en {\jm}, {\rl}.}
 \end{center}
-\pstart
-\edtext{Y pues}{\lemma{y pues}\Afootnote{pero {\gamm}, {\im}}} digo que \edtext{acompañen}{\Afootnote{aco\emph{n}pañe {\eg}}}\\
-y \edtext{lleguen}{\Afootnote{llegue {\eg}}} fasta la huesa\\
+\nstart
+\footA{Y pues \lemma{y pues}}{pero {\gamm}, {\im}} digo que \footA{acompañen}{aco\emph{n}pañe {\eg}}\\
+y \footA{lleguen}{llegue {\eg}} fasta la huesa\\
 co\emph{n} su dueño;\\
-\edtext{por eso}{\Afootnote{por esto {\jm}; mas por eso {\hh}}} \edtext{no nos engañen}{\Afootnote{no nos engañe {\eg}; no sengañen {\hh}}}\footnoteE{Se adoptaron las lecciones plurales del texto mayoritario frente a las de número singular --esto es, \comillas{aco\emph{n}pañe}, \comillas{llegue} y \comillas{engañe}-- que porta {\eg}.},\\
-pues se va la vida \edtext{apriesa}{\Afootnote{espesa {\mn}}}\\
+\footA{por eso}{por esto {\jm}; mas por eso {\hh}} \footA{no nos engañen}{no nos engañe {\eg}; no sengañen {\hh}}\footE{Se adoptaron las lecciones plurales del texto mayoritario frente a las de número singular --esto es, \comillas{aco\emph{n}pañe}, \comillas{llegue} y \comillas{engañe}-- que porta {\eg}.},\\
+pues se va la vida \footA{apriesa}{espesa {\mn}}\\
 como sueño.\par
-\edtext{Y}{\lemma{y}\Afootnote{q\emph{ue} {\hh}}} los \edtext{plazeres}{\Afootnote{deleytes {\gamm}, {\im}}} de acá\\
+\footA{Y \lemma{y}}{q\emph{ue} {\hh}} los \footA{plazeres}{deleytes {\gamm}, {\im}} de acá\\
 son, en q\emph{ue} nos deleitamos,\\
 tenporales,\\
 y los torme\emph{n}tos de allá,\\
 que por ellos esperamos,\\
 eternales.\par
-\pend
+\nend
+%
+\begin{center}
+	\textbf{XIII}\footT{\textbf{XIII} XII en {\jm}, {\rl}.}
+\end{center}
+\nstart
+Los plazeres \emph{e} dulçores\\
+de esta vida \footA{trabajada}{trabajosa {\eg}}\\
+que tenemos\\
+\footA{que son}{no son {\rl}, {\im}} sino corredores,\\
+y la muerte, la çelada\\
+en que caemos.\par
+No mirando \footA{n\emph{uest}ro daño}{nuestros daños {\mn}},\\
+corremos a rie\emph{n}da suelta\\
+sin parar;\\
+\footA{desque}{cuando {\hh}, {\im}} vemos el engaño,\\
+\footA{si}{y \emph{γ}, {\im}} queremos dar la buelta\\
+no ay lugar.\par
+\nend
 \repage
 %
 \begin{center}
-	\textbf{XIII}\footnoteA{\textbf{XIII} XII en {\jm}, {\rl}.}
+	\textbf{XIV}\footT{\textbf{XIV} XXVI en {\jm}.}
 \end{center}
-\pstart
-Los plazeres \emph{e} dulçores\\
-de esta vida \edtext{trabajada}{\Afootnote{trabajosa {\eg}}}\\
-que tenemos\\
-\edtext{que son}{\Afootnote{no son {\rl}, {\im}}} sino corredores,\\
-y la muerte, la çelada\\
-en que caemos.\par
-No mirando \edtext{n\emph{uest}ro daño}{\Afootnote{nuestros daños {\mn}}},\\
-corremos a rie\emph{n}da suelta\\
-sin parar;\\
-\edtext{desque}{\Afootnote{cuando {\hh}, {\im}}} vemos el engaño,\\
-\edtext{si}{\Afootnote{y \emph{γ}, {\im}}} queremos dar la buelta\\
-no ay lugar.\par
-\pend
-%
-\begin{center}
-	\textbf{XIV}\footnoteA{\textbf{XIV} XXVI en {\jm}.}
-\end{center}
-\pstart
+\nstart
 Estos reyes poderosos\\
-que \edtext{vemos}{\lemma{veemos}\Afootnote{leemos {\jm}; vedes {\etag}}} por escrituras\\
+que \footA{vemos \lemma{veemos}}{leemos {\jm}; vedes {\etag}} por escrituras\\
 ya pasadas,\\
-co\emph{n} \edtext{casos tristes}{\Afootnote{talos frjos {\rl}}}, llorosos,\\
+co\emph{n} \footA{casos tristes}{talos frjos {\rl}}, llorosos,\\
 fuero\emph{n} sus buenas ve\emph{n}turas\\
-\edtext{trastornadas}{\Afootnote{acabadas {\hh}}};\par
+\footA{trastornadas}{acabadas {\hh}};\par
 así que no ay cosa fuerte,\\
-\edtext{que papas y enperadores}{\Afootnote{reyes papas emperadores {\rl}; a papas ni emperadores {\hh}; que a papas y emperadores {\im}}}\\
-y \edtext{perlados}{\Afootnote{prelados {\jm}}},\\
+\footA{que papas y enperadores}{reyes papas emperadores {\rl}; a papas ni emperadores {\hh}; que a papas y emperadores {\im}}\\
+y \footA{perlados}{prelados {\jm}},\\
 así los trata la muerte\\
 como a los pobres pastores\\
 de ganados.\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{XV}\footnoteA{\textbf{XV} XXVII en {\jm}.}
+	\textbf{XV}\footT{\textbf{XV} XXVII en {\jm}.}
 \end{center}
-\pstart
+\nstart
 Dexemos a los troyanos,\\
 que sus males no los vimos\\
 ni sus glorias;\\
 dexemos a los romanos,\\
-\edtext{aunque leemos y oímos}{\lemma{avn que leemos y oymos}\Afootnote{avn q\emph{ue} oymos y leemos {\delt}; aunque oymos y leimos {\etag}, {\im}}}\\
-\edtext{sus estorias}{\Afootnote{sus victorias {\jm}, {\hh}, {\im}}}.\par
+\footA{aunque leemos y oímos \lemma{avn que leemos y oymos}}{avn q\emph{ue} oymos y leemos {\delt}; aunque oymos y leimos {\etag}, {\im}}\\
+\footA{sus estorias}{sus victorias {\jm}, {\hh}, {\im}}.\par
 No curemos de saber\\
-lo de aquel \edtext{siglo}{\Afootnote{tie\emph{m}po {\hh}}} pasado\\
+lo de aquel \footA{siglo}{tie\emph{m}po {\hh}} pasado\\
 qué fue de ello;\\
 vengamos a lo de ayer\\
 que tan bie\emph{n} es olvidado\\
 como aquello.\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{XVI}\footnoteA{\textbf{XVI} XXVIII en {\jm}.}
+	\textbf{XVI}\footT{\textbf{XVI} XXVIII en {\jm}.}
 \end{center}
-\pstart
+\nstart
 ¿Qué se fizo el rey don Jua\emph{n}?\\
 Los infantes de Aragó\emph{n},\\
 ¿qué se fiziero\emph{n}?\\
 ¿Qué fue de ta\emph{n}to galán?\\
 ¿Qué fue de tanta inve\emph{n}çión\\
-como \edtext{traxiero\emph{n}}{\Afootnote{truxieron {\delt}, {\mn}}}?\par
-Las justas y los torneos,\edtext{}{\linenum{|||||189}\Afootnote[nosep]{\hspace*{-0.4em}\textbf{/190}--\textbf{192} \emph{transp.} {\rl}}}\\
+como \footA{traxiero\emph{n}}{truxieron {\delt}, {\mn}}?\par
+Las justas y los torneos,\footA[ad=189]{}{\hskip-1pt\textbf{/190--192} \emph{transp.} {\rl}}\\
 parame\emph{n}tos, bordaduras\\
 y çimeras\\
 ¿fuero\emph{n} sino devaneos?\\
 ¿Qué fuero\emph{n} sino verduras\\
 de las eras?\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{XVII}\footnoteA{\textbf{XVII} XXIX en {\jm}.}
+	\textbf{XVII}\footT{\textbf{XVII} XXIX en {\jm}.}
 \end{center}
-\pstart
+\nstart
 ¿Qué se fiziero\emph{n} las damas,\\
 sus tocados, sus vestidos,\\
 sus olores?\\
 ¿Qué se fiziero\emph{n} las llamas\\
 de los fuegos ençe\emph{n}didos\\
-\edtext{de amadores}{\Afootnote{de amores {\eg}, {\jm}}}?\par
+\footA{de amadores}{de amores {\eg}, {\jm}}?\par
 ¿Qué se fizo aquel trobar,\\
 las músicas acordadas\\
 que tañían?\\
 ¿Qué se fizo aquel dançar,\\
-aquellas ropas \edtext{trepadas}{\Afootnote{japadas {\jm}; chapadas {\rl}, {\etag}, {\im}}}\\
-que \edtext{traían}{\lemma{trayan}\Afootnote{vestian {\etag}}}?\par
-\pend
-\repage
+aquellas ropas \footA{trepadas}{japadas {\jm}; chapadas {\rl}, {\etag}, {\im}}\\
+que \footA{traían \lemma{trayan}}{vestian {\etag}}?\par
+\nend
 %
 \begin{center}
-	\textbf{XVIII}\footnoteA{\textbf{XVIII} XXX en {\jm}.}
+	\textbf{XVIII}\footT{\textbf{XVIII} XXX en {\jm}.}
 \end{center}
-\pstart
+\nstart
 Pues el otro, su heredero,\\
-don Enriq\emph{ue}, ¡q\emph{ué} \edtext{poderes}{\Afootnote{poderoso {\jm}}}\\
+don Enriq\emph{ue}, ¡q\emph{ué} \footA{poderes}{poderoso {\jm}}\\
 alcançava!\\
 ¡Quán blando y q\emph{uá}nd falaguero,\\
 el mu\emph{n}do co\emph{n} sus plazeres\\
 se le dava!\par
-Mas \edtext{verás}{\lemma{veras}\Afootnote{vereys {\jm}}} q\emph{uá}nd enemigo,\\
+Mas \footA{verás \lemma{veras}}{vereys {\jm}} q\emph{uá}nd enemigo,\\
 q\emph{uá}nd contrario, q\emph{uá}nd cruel\\
 se le mostró;\\
-aviéndole seído\footnoteE{\comillas{seydo} proviene del vocablo aragonés \comillas{seyer} (\emph{DICCA-XV}). En cuanto al conteo silábico, probablemente contiene una sinéresis, porque en su acentuación regular se cuenta \comillas{se-ý-do}, mas, por ser \emph{sido} una trivialización, según porta la lección {\jm}, \emph{seydo}, por cuestiones métricas, para no causar un eneasílabo, debe necesariamente contener una sinéresis en \comillas{seý}, calculando así el octosílabo \comillas{a-vién-do-le-seý-do a-mi-go}.} amigo,\\
+aviéndole seído\footE{\comillas{seydo} proviene del vocablo aragonés \comillas{seyer} (\emph{DICCA-XV}). En cuanto al conteo silábico, probablemente contiene una sinéresis, porque en su acentuación regular se cuenta \comillas{se-ý-do}, mas, por ser \emph{sido} una trivialización, según porta la lección {\jm}, \emph{seydo}, por cuestiones métricas, para no causar un eneasílabo, debe necesariamente contener una sinéresis en \comillas{seý}, calculando así el octosílabo \comillas{a-vién-do-le-seý-do a-mi-go}.} amigo,\\
 ¡q\emph{uá}nd poco duró con él\\
 lo que le dio!\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{XIX}\footnoteA{\textbf{XIX} XXXI en {\jm}.}
+	\textbf{XIX}\footT{\textbf{XIX} XXXI en {\jm}.}
 \end{center}
-\pstart
-Las dádivas \edtext{desmedidas}{\Afootnote{demasiadas {\im}}},\\
+\nstart
+Las dádivas \footA{desmedidas}{demasiadas {\im}},\\
 los hedefiçios reales\\
 llenos de oro,\\
 las baxillas ta\emph{n} febridas,\\
 los enriques y reales\\
 del thesoro,\par
 los jaezes, los cavallos\\
-\edtext{de su gente}{\Afootnote{desta gente {\jm}; de sus gentes {\rl}; y sus gentes {\hh}}}\edtext{}{\Afootnote[nosep]{\emph{om.} {\mn}}} y atavíos\\
+\footA{de su gente}{desta gente {\jm}; de sus gentes {\rl}; y sus gentes {\hh}}\footA{}{\emph{om.} {\mn}} y atavíos\\
 ta\emph{n} sobrados\\
-¿\edtext{dónde}{\lemma{donde}\Afootnote{ado {\hh}}} iremos a buscallos?\\
+¿\footA{dónde \lemma{donde}}{ado {\hh}} iremos a buscallos?\\
 ¿Qué fuero\emph{n} sino roçíos\\
 de los prados?\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{XX}\footnoteA{\textbf{XX} XXXII en {\jm}.}
+	\textbf{XX}\footT{\textbf{XX} XXXII en {\jm}.}
 \end{center}
-\pstart
+\nstart
 Pues su herm\emph{an}o el inoçe\emph{n}te,\\
 que en su vida suçesor\\
-\edtext{se llamó}{\lemma{se llamo}\Afootnote{le firieron {\rl}}},\\
+\footA{se llamó \lemma{se llamo}}{le firieron {\rl}},\\
 qué corte ta\emph{n} exçelente\\
 tovo, y q\emph{uá}nto gran señor\\
-\edtext{le}{\Afootnote{se {\jm}}} \edtext{siguió}{\lemma{siguio}\Afootnote{siguieron {\rl}}};\par
+\footA{le}{se {\jm}} \footA{siguió \lemma{siguio}}{siguieron {\rl}};\par
 mas como fuese mortal,\\
-\edtext{metiólo}{\lemma{metiolo}\Afootnote{leuo le {\jm}; echole {\hh}}} la muerte luego\\
-\edtext{en su}{\Afootnote{en la su {\jm}}} fragua.\\
+\footA{metiólo \lemma{metiolo}}{leuo le {\jm}; echole {\hh}} la muerte luego\\
+\footA{en su}{en la su {\jm}} fragua.\\
 ¡Oh, juïzio divinal,\\
 q\emph{ua}ndo más ardía el fuego,\\
-\edtext{echaste}{\Afootnote{cebaste {\mn}}} agua!\par
-\pend
+\footA{echaste}{cebaste {\mn}} agua!\par
+\nend
 %
 \begin{center}
-	\textbf{XXI}\footnoteA{\textbf{XXI} XXXIII en {\jm}.}
+	\textbf{XXI}\footT{\textbf{XXI} XXXIII en {\jm}.}
 \end{center}
-\pstart
+\nstart
 Pues aquel gran Co\emph{n}destable,\\
-\edtext{maestre}{\Afootnote{maestro {\jm}}} que conosçimos\\
+\footA{maestre}{maestro {\jm}} que conosçimos\\
 ta\emph{n} privado,\\
-\edtext{no cunple}{\Afootnote{que cu\emph{m}ple {\hh}}} \edtext{q\emph{ue} de él se fable}{\lemma{q\emph{ue} del se fable}\Afootnote{que mas hable {\rl}}},\\
-\edtext{sino sólo que lo}{\lemma{sino solo que lo}\Afootnote{sino solo lo que {\jm}; mas solo como lo {\rl}; saluo solo que lo {\hh}}} vimos\\
+\footA{no cunple}{que cu\emph{m}ple {\hh}} \footA{q\emph{ue} de él se fable \lemma{q\emph{ue} del se fable}}{que mas hable {\rl}},\\
+\footA{sino sólo que lo \lemma{sino solo que lo}}{sino solo lo que {\jm}; mas solo como lo {\rl}; saluo solo que lo {\hh}} vimos\\
 degollado;\par
 sus infinitos tesoros,\\
-sus villas \edtext{y}{\Afootnote{\emph{om.} {\rl}}} sus lugares,\\
+sus villas \footA{y}{\emph{om.} {\rl}} sus lugares,\\
 su ma\emph{n}dar,\\
 ¿qué le fuero\emph{n} sino lloros?\\
-¿\edtext{Qué fuero\emph{n} sino pesares}{\lemma{que fuero\emph{n} sino pesares}\Afootnote{dolores, ansias pesares {\mn}; fueron le sy no {\im}}}\\
+¿\footA{Qué fuero\emph{n} sino pesares \lemma{que fuero\emph{n} sino pesares}}{dolores, ansias pesares {\mn}; fueron le sy no {\im}}\\
 al dexar?\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{XXII}\footnoteA{\textbf{XXII} XXXIV en {\jm}.}
+	\textbf{XXII}\footT{\textbf{XXII} XXXIV en {\jm}.}
 \end{center}
-\pstart
-\edtext{Pues}{\lemma{pues}\Afootnote{E {\rl}}} los otros dos herm\emph{an}os,\\
+\nstart
+\footA{Pues \lemma{pues}}{E {\rl}} los otros dos herm\emph{an}os,\\
 maestres ta\emph{n} prosperados\\
 como reyes\\
-que a los \edtext{gra\emph{n}des}{\Afootnote{baxos {\hh}}} y medianos\\
+que a los \footA{gra\emph{n}des}{baxos {\hh}} y medianos\\
 troxiero\emph{n} tan sojudgados\\
 a sus leyes;\par
-\edtext{aquella}{\Afootnote{y su grand {\mn}}} prosperidat\\
+\footA{aquella}{y su grand {\mn}} prosperidat\\
 que e\emph{n} ta\emph{n} alto fue sobida\\
 y ensalçada;\\
 ¿qué fue sino claridat,\\
-\edtext{que}{\Afootnote{quando {\rl}}} estando más ençe\emph{n}dida\\
-fue \edtext{amatada}{\Afootnote{matada {\jm}}}?\par
-\pend
+\footA{que}{quando {\rl}} estando más ençe\emph{n}dida\\
+fue \footA{amatada}{matada {\jm}}?\par
+\nend
 %
 \begin{center}
-	\textbf{XXIII}\footnoteA{\textbf{XXIII} XXXV en {\jm}.}
+	\textbf{XXIII}\footT{\textbf{XXIII} XXXV en {\jm}.}
 \end{center}
-\pstart
+\nstart
 Tantos duq\emph{ue}s exçele\emph{n}tes,\\
 tantos marq\emph{ue}ses y co\emph{n}des\\
 y varones\\
 como vimos ta\emph{n} pote\emph{n}tes,\\
 di, Muerte, ¿do los asco\emph{n}des\\
-\edtext{y traspones}{\Afootnote{los pones {\jm}}}?\par
-\edtext{Y las sus}{\lemma{y las sus}\Afootnote{y sus muy {\im}}} claras hazañas\\
+\footA{y traspones}{los pones {\jm}}?\par
+\footA{Y las sus \lemma{y las sus}}{y sus muy {\im}} claras hazañas\\
 que fiziero\emph{n} en las guerras\\
 y en las pazes,\\
-q\emph{ua}ndo tú, cruda\footnoteE{\comillas{cruda} = \comillas{Se toma tambien por cruel, áspero, sangriento y desapiadado.} (\emph{Autoridades}, 3ª acepción).}, te ensañas,\\
+q\emph{ua}ndo tú, cruda\footE{\comillas{cruda}: \comillas{Se toma tambien por cruel, áspero, sangriento y desapiadado.} (\emph{Autoridades}, 3ª acepción).}, te ensañas,\\
 co\emph{n} tu fuerça las atierras\\
-y desfazes\footnoteE{\comillas{guerras/pazes}, \comillas{atierras/desfazes} = es probable que {\jm} haya leído erróneamente, invirtiendo el orden entre los vv. 272-273 y 275-276, algo que puede conjeturarse por la lección \emph{passos}, quizá una lectura errónea de \emph{pazes} y \emph{guerras}, que aparece en 273, cuando en el resto de testimonios aparece en el 272, al igual que en lugar de \emph{atierras} lee \emph{desfazes} y al revés.}.\par
-\pend
+y desfazes\footE{\comillas{guerras/pazes}, \comillas{atierras/desfazes}: es probable que {\jm} haya leído erróneamente, invirtiendo el orden entre los vv. 272-273 y 275-276, algo que puede conjeturarse por la lección \emph{passos}, quizá una lectura errónea de \emph{pazes} y \emph{guerras}, que aparece en 273, cuando en el resto de testimonios aparece en el 272, al igual que en lugar de \emph{atierras} lee \emph{desfazes} y al revés.}.\par
+\nend
 %
 \begin{center}
-	\textbf{XXIV}\footnoteA{\textbf{XXIV} XXXVI en {\jm}.}
+	\textbf{XXIV}\footT{\textbf{XXIV} XXXVI en {\jm}.}
 \end{center}
-\pstart
-Las \edtext{huestes}{\Afootnote{\emph{om.} {\mn}}} innumerables,\\
+\nstart
+Las \footA{huestes}{\emph{om.} {\mn}} innumerables,\\
 los pendones y esta\emph{n}dartes\\
 y vanderas,\\
 los castillos inpunables,\\
 los muros y baluartes\\
 y barreras,\par
-la cava ho\emph{n}da, \edtext{chapada}{\Afootnote{japada {\jm}}},\\
-\edtext{y}{\Afootnote{o {\gamm}, {\im}}} qualquier otro reparo\\
+la cava ho\emph{n}da, \footA{chapada}{japada {\jm}},\\
+\footA{y}{o {\gamm}, {\im}} qualquier otro reparo\\
 ¿qué aprovecha?\\
-\edtext{Q\emph{ua}ndo}{\lemma{q\emph{ua}ndo}\Afootnote{que si {\etag}, {\im}}} tú vienes irada,\\
-todo lo \edtext{pasas}{\Afootnote{lleuas {\hh}}} \edtext{de claro}{\Afootnote{de claro en claro {\jm}}}\\
+\footA{Q\emph{ua}ndo \lemma{q\emph{ua}ndo}}{que si {\etag}, {\im}} tú vienes irada,\\
+todo lo \footA{pasas}{lleuas {\hh}} \footA{de claro}{de claro en claro {\jm}}\\
 co\emph{n} tu flecha.\par
-\pend
-\repage
+\nend
 %
 \begin{center}
-	\textbf{XXV}\footnoteA{\textbf{XXV} XIII en {\jm}. || dirige la fabla al maestre do\emph{n} rodrigo su padre {\eg}; ffabla del maestre do\emph{n} rr\emph{odri}go ma\emph{n}riq\emph{ue} {\hh}.}
+	\textbf{XXV}\footT{\textbf{XXV} XIII en {\jm}. \textbf{||} dirige la fabla al maestre do\emph{n} rodrigo su padre {\eg}; ffabla del maestre do\emph{n} rr\emph{odri}go ma\emph{n}riq\emph{ue} {\hh}.}
 \end{center}
-\pstart
-Aquel de \edtext{buenos}{\Afootnote{bienes {\mn}}} abrigo,\\
+\nstart
+Aquel de \footA{buenos}{bienes {\mn}} abrigo,\\
 amado por virtuoso\\
 de la gente,\\
 el maestre don Rodrigo\\
-Ma\emph{n}riq\emph{ue}, \edtext{tanto}{\Afootnote{tan {\hh}, {\im}}} \edtext{famoso}{\Afootnote{fermoso {\jm}}},\\
-\edtext{tan}{\Afootnote{y tan {\eg}, {\im}}} valiente,\par
-sus grandes fechos y \edtext{claros}{\Afootnote{actos {\jm}}}\\
-no cu\emph{n}ple que los \edtext{alabe}{\Afootnote{acaben {\mn}}},\\
+Ma\emph{n}riq\emph{ue}, \footA{tanto}{tan {\hh}, {\im}} \footA{famoso}{fermoso {\jm}},\\
+\footA{tan}{y tan {\eg}, {\im}} valiente,\par
+sus grandes fechos y \footA{claros}{actos {\jm}}\\
+no cu\emph{n}ple que los \footA{alabe}{acaben {\mn}},\\
 pues los viero\emph{n},\\
 ni los quiero fazer caros,\\
-\edtext{pues que todo el mu\emph{n}do sabe}{\Afootnote{pues que todo el mu\emph{n}do lo sabe {\eg}; pues quel mundo todo sabe {\rl}; pues el mundo todo sabe {\im}}}\\
+\footA{pues que todo el mu\emph{n}do sabe}{pues que todo el mu\emph{n}do lo sabe {\eg}; pues quel mundo todo sabe {\rl}; pues el mundo todo sabe {\im}}\\
 quales fuero\emph{n}.\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{XXVI}\footnoteA{\textbf{XXVI} XIV en {\jm}.}
+	\textbf{XXVI}\footT{\textbf{XXVI} XIV en {\jm}.}
 \end{center}
-\pstart
-¡\edtext{Qué amigo de sus amigos}{\lemma{Que amigo desus amigos}\Afootnote{que amigo de amigos {\eg}, {\hh}; amigo de sus amigos {\mn}, {\im}}}!,\\
+\nstart
+¡\footA{Qué amigo de sus amigos \lemma{Que amigo desus amigos}}{que amigo de amigos {\eg}, {\hh}; amigo de sus amigos {\mn}, {\im}}!,\\
 ¡qué señor pa\emph{ra} criados\\
 y parientes!\\
 Qué enemigo de enemigos!\\
-¡Q\emph{ué} \edtext{maestro}{\Afootnote{maestre {\eg}}} de esforçados\\
+¡Q\emph{ué} \footA{maestro}{maestre {\eg}} de esforçados\\
 y valientes!\par
 Q\emph{ué} seso para discretos!\\
 Qué gr\emph{aci}a para donosos!\\
 ¡Qué razón!\\
 ¡Qué benigno a los sugebtos!\\
-Y a los bravos \edtext{y dañosos}{\Afootnote{y furiosos {\jm}; y soberuios {\hh}}},\\
+Y a los bravos \footA{y dañosos}{y furiosos {\jm}; y soberuios {\hh}},\\
 ¡un leó\emph{n}!\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{XXVII}\footnoteA{\textbf{XXVII} XV en {\jm}. \textbf{||} conpara {\eg}.}
+	\textbf{XXVII}\footT{\textbf{XXVII} XV en {\jm}. \textbf{||} conpara {\eg}.}
 \end{center}
-\pstart
-En \edtext{}{\Afootnote[nosep]{en [la] \emph{eras.} {\eg}}} ventura, \edtext{Otavïano}{\lemma{otauiano}\Afootnote{octoniano {\jm}}},\\
+\nstart
+En \footA{}{en [la] \emph{eras.} {\eg}} ventura, \footA{Otavïano \lemma{otauiano}}{octoniano {\jm}},\\
 Jullo Çésar en vençer\\
 y batallar;\\
 en la virtud, Africano,\\
 Aníbal en el saber\\
 y trabajar.\par
-En la bondad, un \edtext{Trajano}{\lemma{trajano}\Afootnote{hatrajano {\rl}}},\\
+En la bondad, un \footA{Trajano \lemma{trajano}}{hatrajano {\rl}},\\
 Tito en liberalidad\\
 con alegría;\\
-\edtext{en su braço}{\Afootnote{enla nobleza {\hh}}}, \edtext{Aurelïano}{\lemma{aureliano}\Afootnote{hun archiano {\jm}, {\im}; abreliano {\rl}; el troyano {\hh}}},\\
-\edtext{Marco Atilio}{\lemma{marco atilio}\Afootnote{marco tulio {\eg}, {\im}; mateo tulio {\jm}}} en la verdad\\
+\footA{en su braço}{enla nobleza {\hh}}, \footA{Aurelïano \lemma{aureliano}}{hun archiano {\jm}, {\im}; abreliano {\rl}; el troyano {\hh}},\\
+\footA{Marco Atilio \lemma{marco atilio}}{marco tulio {\eg}, {\im}; mateo tulio {\jm}} en la verdad\\
 que prometía.\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{XXVIII}\footnoteA{\textbf{[XXVIII]} XXVI en {\jm}. \textbf{||} prosigue {\eg}.}
+	\textbf{XXVIII}\footT{\textbf{[XXVIII]} XXVI en {\jm}. \textbf{||} prosigue {\eg}.}
 \end{center}
-\pstart
-Antonio \edtext{Pío}{\lemma{pio}\Afootnote{pia {\jm}}} e\emph{n} cleme\emph{n}çia,\\
-\edtext{Marco Aurelio}{\lemma{marco aurelio}\Afootnote{arebo anthonio {\jm}}} e\emph{n} ig\emph{ua}ldat\\
-\edtext{y}{\Afootnote{del {\delt}, {\mn}, {\im}; y bue\emph{n} {\hh}}} senblante;\\
-\edtext{Adrïano}{\lemma{adriano}\Afootnote{adriapo {\jm}}} en eloq\emph{ue}nçia,\\
-\edtext{Theodosio}{\lemma{theodosio}\Afootnote{theosio {\eg}; verdosio {\rl}}} en umanidat\footnoteE{Cuenta con 9 sílabas por las sílabas gramaticales más la aguda \emph{–dad}. Quilis (2009) sostiene que aquello corresponde a una sinéresis en «Theo», leyéndose así «Theo-do-sioen hu-ma-ni-dad».}\\                                                            
+\nstart
+Antonio \footA{Pío \lemma{pio}}{pia {\jm}} e\emph{n} cleme\emph{n}çia,\\
+\footA{Marco Aurelio \lemma{marco aurelio}}{arebo anthonio {\jm}} e\emph{n} ig\emph{ua}ldat\\
+\footA{y}{del {\delt}, {\mn}, {\im}; y bue\emph{n} {\hh}} senblante;\\
+\footA{Adrïano \lemma{adriano}}{adriapo {\jm}} en eloq\emph{ue}nçia,\\
+\footA{Theodosio \lemma{theodosio}}{theosio {\eg}; verdosio {\rl}} en umanidat\footE{Cuenta con 9 sílabas por las sílabas gramaticales más la aguda \emph{–dad}. Quilis (2009) sostiene que aquello corresponde a una sinéresis en «Theo», leyéndose así «Theo-do-sioen hu-ma-ni-dad».}\\                                                            
 y buen talante.\par
-\edtext{Aurelio Alexandre}{\lemma{aurelio alexandre}\Afootnote{marco alixandre {\eg}; aurelio y alexandre {\jm}; aurelto alexandre {\rl}; aurelio liandre {\hh}}} fue\\
+\footA{Aurelio Alexandre \lemma{aurelio alexandre}}{marco alixandre {\eg}; aurelio y alexandre {\jm}; aurelto alexandre {\rl}; aurelio liandre {\hh}} fue\\
 en diçiplina y rigor\\
 de la guerra;\\
-\edtext{un}{\Afootnote{\emph{om.} {\eg}}} Constantino en la fe,\\
-\edtext{Camillo}{\lemma{camjllo}\Afootnote{canjno {\eg}; camelio {\im}}} en el \edtext{gran}{\Afootnote{gra\emph{n}de {\hh}}} amor\\
+\footA{un}{\emph{om.} {\eg}} Constantino en la fe,\\
+\footA{Camillo \lemma{camjllo}}{canjno {\eg}; camelio {\im}} en el \footA{gran}{gra\emph{n}de {\hh}} amor\\
 de su tierra.\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{XXIX}\footnoteA{\textbf{XXIX} XVII en {\jm}; XXX en {\hh}.}
+	\textbf{XXIX}\footT{\textbf{XXIX} XVII en {\jm}; XXX en {\hh}.}
 \end{center}
-\pstart
+\nstart
 No dexó grandes thesoros\\
-ni \edtext{alcançó}{\lemma{alcanço}\Afootnote{llego {\hh}}} \edtext{gra\emph{n}des}{\Afootnote{muchas {\rl}}} riq\emph{ue}zas\\ 
+ni \footA{alcançó \lemma{alcanço}}{llego {\hh}} \footA{gra\emph{n}des}{muchas {\rl}} riq\emph{ue}zas\\ 
 ni baxillas,\\
-mas fizo \edtext{guerras a moros}{\Afootnote{guerra a los moros {\delt}, {\mn}, {\im}; gran guerra a moros {\hh}}}\footnoteE{Se siguen las lecciones plurales de {\eg}, porque don Rodrigo Manrique probablemente no participó en una guerra, sino en otras más. Es necesario atender a los datos proporcionados por Fernando del Pulgar en su \emph{Claros varones de Castilla} (ca. 1480-1486) que, en un capítulo dedicado al maestre, el XIII, titulado «El Maestre Don Rodrigo Manrrique, Conde de Paredes» --que ya citó \textcite[cap. IX]{MenendezYPelayo1944}--, los recoge con gran detalle. A continuación, el pasaje según la edición crítica de Tate:\par
+mas fizo \footA{guerras a moros}{guerra a los moros {\delt}, {\mn}, {\im}; gran guerra a moros {\hh}}\footE{Se siguen las lecciones plurales de {\eg}, porque don Rodrigo Manrique probablemente no participó en una guerra, sino en otras más. Es necesario atender a los datos proporcionados por Fernando del Pulgar en su \emph{Claros varones de Castilla} (ca. 1480-1486) que, en un capítulo dedicado al maestre, el XIII, titulado «El Maestre Don Rodrigo Manrrique, Conde de Paredes» --que ya citó \textcite[cap. IX]{MenendezYPelayo1944}--, los recoge con gran detalle. A continuación, el pasaje según la edición crítica de Tate:\par
 «En las batallas ⁊ muchos recuentros que ovo con moros ⁊ con christianos este cavallero fue el que, mostrando grand esfuerço a los suyo, fería primero en los contrarios. E las gentes de su conpañía, visto el efuerço de su capitán, todos le seguían ⁊ cobravan osadía de pelear. Tenía tan grand conoscimiento de las cosas del canpo, ⁊ proveí[a]las en tal manera que donde él fue principal capitán nunca puso su gente en logar do se oviese de retraer, porque bolver las espaldas al enemigo era tan ageno que su ánimo que elegía antes de recebir la muerte peleando que salvar la vida huyendo.\par 
 »Este cavallero osó acometer grandes fazañas. Especialmente escaló una noche la cibdad de Huesca, que es del reino de Granada. E como quier que subiendo el escala los suyos fueron sentidos de los moros, ⁊ fueron algunos derribados del adarve ⁊ feridos en la subida [...] subieron el muro peleando ⁊ no fallescieron de sus fuerças defendiéndolo, aunque veían los unos derramar su sangre, los otros caer de la cerca. E de esta manera, matando de los moros ⁊ muriendo de los suyos, este capitán, ferido en el braço de una saeta, peleando entró la cibdad e retroxo los moros fasta que los cercó en la fortaleza. [...] Este cavallero duró ⁊ fizo durar a los suyos conbatiendo los moros que tenía cercados, e resistiendo a los moros que le tenía cercado por espacio de dos días, fasta que vino el socorro [...] Ganada aquella cibdad, dexado en ella por capitán a un su hermano llamado Gómes Manrrique, ganó otras fortalezas en la comarca. Socorrió muchas vezes algunas cibdades ⁊ villa ⁊ capitanes christianos en tienpo de estrema necesidad. ⁊ fizo tanta guerra en aquellas tierras que en el reino de Granada el nonbre de Rodrigo Ma[n]rrique fue mucho tienpo a los moros grand terror».}\\
-gana\emph{n}do sus fortalezas \edtext{}{\Afootnote[nosep]{fortalezas [y villas] \emph{eras.} {\eg}}}\\
+gana\emph{n}do sus fortalezas \footA{}{fortalezas [y villas] \emph{eras.} {\eg}}\\
 y sus villas;\par
 y en las lides que vençió,\\
-\edtext{muchos moros y cavallos}{\Afootnote{quantos moros ⁊ cauallos {\rl}; muchos caualleros y cauallos {\im}}}\\                                      
+\footA{muchos moros y cavallos}{quantos moros ⁊ cauallos {\rl}; muchos caualleros y cauallos {\im}}\\                                      
 se perdiero\emph{n},\\
-\edtext{y}{\Afootnote{\emph{om.} {\hh}}} en este ofiçio ganó\\
-las \edtext{rentas}{\Afootnote{villas {\eg}; rendas {\rl}}} y los basallos\\
+\footA{y}{\emph{om.} {\hh}} en este ofiçio ganó\\
+las \footA{rentas}{villas {\eg}; rendas {\rl}} y los basallos\\
 que le diero\emph{n}.\par
-\pend 
+\nend 
 %
 \begin{center}
-	\textbf{XXX}\footnoteA{\textbf{XXX} XVIII en {\jm}; XXIX en {\hh}.}
+	\textbf{XXX}\footT{\textbf{XXX} XVIII en {\jm}; XXIX en {\hh}.}
 \end{center}
-\pstart
-Pues \edtext{por su}{\Afootnote{ensu {\jm}}} ho\emph{n}rra y estado,\\
-\edtext{en otros}{\Afootnote{en estos {\eg}}} tie\emph{n}pos pasados,\\
-¿cómo se \edtext{uvo}{\lemma{vuo}\Afootnote{vio {\mn}}}?\\ Quedando desanparado,\\
-\edtext{con hermanos}{\Afootnote{con sus fijos {\eg}}} y criados\\
+\nstart
+Pues \footA{por su}{ensu {\jm}} ho\emph{n}rra y estado,\\
+\footA{en otros}{en estos {\eg}} tie\emph{n}pos pasados,\\
+¿cómo se \footA{uvo \lemma{vuo}}{vio {\mn}}?\\
+Quedando desanparado,\\
+\footA{con hermanos}{con sus fijos {\eg}} y criados\\
 se sostuvo.\par
 Después q\emph{ue} fechos famosos\\
-fizo \edtext{en estas dichas guerras}{\Afootnote{en la dicha guerra {\jm}; en esta misma guerra {\rl}; en esta dicha guerra {\etag}, {\im}}}\\
+fizo \footA{en estas dichas guerras}{en la dicha guerra {\jm}; en esta misma guerra {\rl}; en esta dicha guerra {\etag}, {\im}}\\
 que fazía,\\
 fizo tratos ta\emph{n} ho\emph{n}rrosos\\
-que le diero\emph{n} \edtext{aún}{\lemma{avn}\Afootnote{muy {\im}}} más \edtext{t\emph{ie}rras}{\Afootnote{tierra {\gamm}, {\im}}}\\
-\edtext{que}{\Afootnote{quel {\jm}}} tenía.\par
-\pend
+que le diero\emph{n} \footA{aún \lemma{avn}}{muy {\im}} más \footA{t\emph{ie}rras}{tierra {\gamm}, {\im}}\\
+\footA{que}{quel {\jm}} tenía.\par
+\nend
 %
 \begin{center}
-	\textbf{XXXI}\footnoteA{\textbf{XXXI} XIX en {\jm}.}
+	\textbf{XXXI}\footT{\textbf{XXXI} XIX en {\jm}.}
 \end{center}
-\pstart
-\edtext{Y}{\lemma{y}\Afootnote{\emph{om.} {\gamm}, {\im}}} estas sus viejas istorias\\
-que co\emph{n} su braço \edtext{pintó}{\lemma{pinto}\Afootnote{gano {\hh}}}\\
-en \edtext{la}{\Afootnote{\emph{om.} {\rl}, {\hh}}} joventud,\\
+\nstart
+\footA{Y \lemma{y}}{\emph{om.} {\gamm}, {\im}} estas sus viejas istorias\\
+que co\emph{n} su braço \footA{pintó \lemma{pinto}}{gano {\hh}}\\
+en \footA{la}{\emph{om.} {\rl}, {\hh}} joventud,\\
 co\emph{n} otras nuevas bitorias,\\
 agora las renovó\\
-en \edtext{la}{\Afootnote{\emph{om.} {\rl}, {\hh}}} senetud\footnoteE{363, \comillas{en la joventud}; 366, \comillas{en la senetud} = ambos pasajes, siguiendo a {\eg} y {\jm}, son un pentasílabo agudo, esto es, un hexasílabo, incurriendo, evidentemente, en una hipermetría. En este caso, {\rl} y {\hh} omiten \emph{la}, pero aun así incurren en una hipermetría por ser tetrasílabos agudos, por tanto, pentasílabos. \textcite{Beltrán1991} selecciona \emph{en la juventud}, lección de su testimonio de base, pero en \textcite{Beltrán2013} selecciona \emph{en juventud}, y no ofrece argumentos de su cambio, sino que lo descarta en el aparato crítico. Según Navarro, en los pasajes «irregulares» Manrique aplicó el pentasílabo quebrado «en condiciones de compensación o sinalefa respecto al octosílabo precedente», que fue «meramente potestativa» y que «no la aplicó de manera sistemática» \parencite[175]{Navarro1961}. Aun así, estos dos pasajes parecen ser irresolubles, incluso aplicando esta regla, que solo funciona si se seleccionan las variantes de {\rl} y {\hh}, esto es, omitir \emph{la}. Resulta complejo cuando otros testimonios no corrigen la hipermetría con sus lecciones. Los lectores podrán elegir cuál variante consideran adecuada, en tanto no sea la de {\mn}, que ya «excede el exceso» con su hexasílabo agudo.};\par
-\edtext{por}{\Afootnote{que por {\eg}}} su grand abilidat,\\
-\edtext{por}{\Afootnote{y por {\eg}}} méritos y ançianía\\
+en \footA{la}{\emph{om.} {\rl}, {\hh}} senetud\footE{363, \comillas{en la joventud}; 366, \comillas{en la senetud} = ambos pasajes, siguiendo a {\eg} y {\jm}, son un pentasílabo agudo, esto es, un hexasílabo, incurriendo, evidentemente, en una hipermetría. En este caso, {\rl} y {\hh} omiten \emph{la}, pero aun así incurren en una hipermetría por ser tetrasílabos agudos, por tanto, pentasílabos. \textcite{Beltrán1991} selecciona \emph{en la juventud}, lección de su testimonio de base, pero en \textcite{Beltrán2013} selecciona \emph{en juventud}, y no ofrece argumentos de su cambio, sino que lo descarta en el aparato crítico. Según Navarro, en los pasajes «irregulares» Manrique aplicó el pentasílabo quebrado «en condiciones de compensación o sinalefa respecto al octosílabo precedente», que fue «meramente potestativa» y que «no la aplicó de manera sistemática» \parencite[175]{Navarro1961}. Aun así, estos dos pasajes parecen ser irresolubles, incluso aplicando esta regla, que solo funciona si se seleccionan las variantes de {\rl} y {\hh}, esto es, omitir \emph{la}. Resulta complejo cuando otros testimonios no corrigen la hipermetría con sus lecciones. Los lectores podrán elegir cuál variante consideran adecuada, en tanto no sea la de {\mn}, que ya «excede el exceso» con su hexasílabo agudo.};\par
+\footA{por}{que por {\eg}} su grand abilidat,\\
+\footA{por}{y por {\eg}} méritos y ançianía\\
 bie\emph{n} gastada,\\
-\edtext{alcançó}{\lemma{alcanço}\Afootnote{alçando {\hh}}} la \edtext{dignidat}{\Afootnote{diuinidad {\jm}}}\\
+\footA{alcançó \lemma{alcanço}}{alçando {\hh}} la \footA{dignidat}{diuinidad {\jm}}\\
 la grand cavall\emph{er}ía\\
 del espada.\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{XXXII}\footnoteA{\textbf{XXXII} XX en {\jm}.}
+	\textbf{XXXII}\footT{\textbf{XXXII} XX en {\jm}.}
 \end{center}
-\pstart
-\edtext{Y}{\lemma{y}\Afootnote{\emph{om.} {\jm}}} sus villas \edtext{y sus t\emph{ie}rras}{\Afootnote{y lugares {\mn}}}\\
+\nstart
+\footA{Y \lemma{y}}{\emph{om.} {\jm}} sus villas \footA{y sus t\emph{ie}rras}{y lugares {\mn}}\\
 ocupadas de tiranos\\
 las falló,\\
 mas por çercos y por guerras\\
 y por fuerça de sus manos\\ 
-las \edtext{cobró}{\lemma{cobro}\Afootnote{gano {\hh}}}.\par
-Pues nuestro rey natural,\edtext{}{\linenum{|||||380}\Afootnote[nosep]{\emph{transp.} {\eg} = \comillas{si de las obras que obro / el nuestro Rey natural}}}\\
+las \footA{cobró \lemma{cobro}}{gano {\hh}}.\par
+Pues nuestro rey natural,\footA[ad=380]{}{\emph{transp.} {\eg} = \comillas{si de las obras que obro / el nuestro Rey natural}}\\
 si de las obras que obró\\
 fue servido,\\
 dígalo el de Portugal,\\
-\edtext{y en}{\Afootnote{en {\eg}; si en {\rl}; quien en {\hh}}} Castilla, quien siguió\\
+\footA{y en}{en {\eg}; si en {\rl}; quien en {\hh}} Castilla, quien siguió\\
 su partido.\par                                                                          
-\pend
+\nend
+\repage
 %
 \begin{center}
-	\textbf{XXXIII}\footnoteA{\textbf{XXXIII} XXI en {\jm}.}
+	\textbf{XXXIII}\footT{\textbf{XXXIII} XXI en {\jm}.}
 \end{center}
-\pstart
-Después \edtext{que puso}{\Afootnote{de puesta {\eg}, {\delt}}} la vida\\
+\nstart
+Después \footA{que puso}{de puesta {\eg}, {\delt}} la vida\\
 tantas vezes por su ley\\
 al tablero,\\
 después de ta\emph{n} bie\emph{n} servida\\
@@ -815,70 +816,69 @@ despu\emph{é}s de ta\emph{n}ta hazaña\\
 a que no puede bastar\\ 
 cuenta çierta,\\
 en la su villa de Ocaña,\\
-vino la Muerte \edtext{a}{\Afootnote{\emph{om.} {\im}}} llamar\edtext{}{\Afootnote[nosep]{lamar \emph{err.} {\im}}}\\
+vino la Muerte \footA{a}{\emph{om.} {\im}} llamar\footA{}{lamar \emph{err.} {\im}}\\
 a su puerta,\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{XXXIV}\footnoteA{\textbf{XXXIV} XXII en {\jm}. \textbf{||} ffabla la muerte con el maestre {\eg}.}
+	\textbf{XXXIV}\footT{\textbf{XXXIV} XXII en {\jm}. \textbf{||} ffabla la muerte con el maestre {\eg}.}
 \end{center}
-\pstart
+\nstart
 diziendo: «bue\emph{n} cavallero,\\
 dexad el mu\emph{n}do engañoso\\                                                               
-\edtext{sin falago}{\Afootnote{y su [\emph{f}-\emph{h}]alago {\gamm}; con halago {\im}}}\footnoteE{Los demás testimonios transmiten «y su [\emph{f}-\emph{h}]alago», que parece tener más sentido, pero que incurre en una hipermetría, porque \emph{h} corresponde a una consonante aspirada o una \emph{f} inicial latina, ya que entre los testimonios alternan \emph{h} ({\rl}) y \emph{f} ({\hh}, {\mn}), aunque alguno la omite ({\jm}); de ser así esto, algo apreciable por la inestabilidad gráfica, la sinalefa no sería posible y, por tanto, sería conveniente adoptar la lección de {\eg}, que es un tetrasílabo. La lección \emph{sin falago} apuntaría --probablemente-- a que don Rodrigo Manrique debería dejar el mundo \comillas{sin atender} o \comillas{seguir su} \emph{falago}, un sentido más o menos similar. Quizá la lección \emph{y su }[\emph{f}-\emph{h}]\emph{alago} incurre en una \emph{lectio facilior}.};\\
+\footA{sin falago}{y su [\emph{f}-\emph{h}]alago {\gamm}; con halago {\im}}\footE{Los demás testimonios transmiten «y su [\emph{f}-\emph{h}]alago», que parece tener más sentido, pero que incurre en una hipermetría, porque \emph{h} corresponde a una consonante aspirada o una \emph{f} inicial latina, ya que entre los testimonios alternan \emph{h} ({\rl}) y \emph{f} ({\hh}, {\mn}), aunque alguno la omite ({\jm}); de ser así esto, algo apreciable por la inestabilidad gráfica, la sinalefa no sería posible y, por tanto, sería conveniente adoptar la lección de {\eg}, que es un tetrasílabo. La lección \emph{sin falago} apuntaría --probablemente-- a que don Rodrigo Manrique debería dejar el mundo \comillas{sin atender} o \comillas{seguir su} \emph{falago}, un sentido más o menos similar. Quizá la lección \emph{y su }[\emph{f}-\emph{h}]\emph{alago} incurre en una \emph{lectio facilior}.};\\
 v\emph{uest}ro coraçó\emph{n} de azero\\
 muestre su esfuerço famoso\\ 
 en este trago.\par
 Y pues de vida y de salud\\
 fezistes ta\emph{n} poca cuenta\\     
 por la fama,\\
-\edtext{fazedla de la virtud}{\Afootnote{esfuercese la virtud {\delt}, {\mn}, {\im}; esforçad vuestra virtud {\hh}}}\\
-para sofrir \edtext{esta}{\Afootnote{aquesta {\hh}}} afrenta\\
-q\emph{ue} \edtext{vos}{\Afootnote{os {\im}}} llama.\par                        
-\pend
-\repage
+\footA{fazedla de la virtud}{esfuercese la virtud {\delt}, {\mn}, {\im}; esforçad vuestra virtud {\hh}}\\
+para sofrir \footA{esta}{aquesta {\hh}} afrenta\\
+q\emph{ue} \footA{vos}{os {\im}} llama.\par                        
+\nend
 %
 \begin{center}
-	\textbf{XXXV}\footnoteA{\textbf{XXXV} XXIII en {\jm}.}
+	\textbf{XXXV}\footT{\textbf{XXXV} XXIII en {\jm}.}
 \end{center}
-\pstart
+\nstart
 »No se os faga ta\emph{n} amarga\\
 la batalla temerosa\\
 que esperáis,\\
-pues otra vida \edtext{más}{\lemma{mas}\Afootnote{tan {\eg}}} larga\\
-\edtext{de fama}{\Afootnote{dela fama {\rl}}} ta\emph{n} glorïosa\\ 
+pues otra vida \footA{más \lemma{mas}}{tan {\eg}} larga\\
+\footA{de fama}{dela fama {\rl}} ta\emph{n} glorïosa\\ 
 acá dexáis;\par
-\edtext{que aunque esta vida de honor}{\Afootnote{aun que vida esta de honor {\im}}}\\
-\edtext{tanpoco no es}{\Afootnote{no penseis ques {\mn}; tan poco no \emph{om.} {\im}}} eternal\\
-\edtext{ni}{\Afootnote{\emph{om.} {\im}}} \edtext{duradera}{\Afootnote{verdadera {\delt}, {\mn}, {\im}}},\\
+\footA{que aunque esta vida de honor}{aun que vida esta de honor {\im}}\\
+\footA{tanpoco no es}{no penseis ques {\mn}; tan poco no \emph{om.} {\im}} eternal\\
+\footA{ni}{\emph{om.} {\im}} \footA{duradera}{verdadera {\delt}, {\mn}, {\im}},\\
 mas co\emph{n} todo es muy mejor\\
-que la \edtext{otra}{\Afootnote{corona {\jm}}} \edtext{temporal}{\Afootnote{ynfernal {\eg}; corporal {\mn}}},\\     
+que la \footA{otra}{corona {\jm}} \footA{temporal}{ynfernal {\eg}; corporal {\mn}},\\     
 pereçedera.\par
-\pend
+\nend
 %
 \begin{center}
-	\textbf{XXXVI}\footnoteA{\textbf{XXXVI} XXIV en {\jm}.}
+	\textbf{XXXVI}\footT{\textbf{XXXVI} XXIV en {\jm}.}
 \end{center}
-\pstart
+\nstart
 »El bivir q\emph{ue} es perdurable\\
 no se gana co\emph{n} estados\\ 
 mu\emph{n}danales,\\
 ni co\emph{n} vida deleitable\\
 en que mora\emph{n} los pecados\\
 infernales;\par
-\edtext{que los}{\Afootnote{mas los {\delt}, {\mn}}} buenos religiosos\\
-\edtext{gánanlo}{\lemma{gananlo}\Afootnote{ganan la {\eg}, {\jm}; ganan los {\rl}}} co\emph{n} oraçiones\\
+\footA{que los}{mas los {\delt}, {\mn}} buenos religiosos\\
+\footA{gánanlo \lemma{gananlo}}{ganan la {\eg}, {\jm}; ganan los {\rl}} co\emph{n} oraçiones\\
 y con lloros;\\
 los cavall\emph{er}os famosos\\
 co\emph{n} trabajos y afliçiones\\ 
 contra moros.\par
-\pend
+\nend
 %
 \begin{center}
 	\textbf{XXXVII}
 \end{center}
-\pstart
-»\edtext{Y}{\lemma{y}\Afootnote{\emph{om.} {\jm}}} pues vos, claro baró\emph{n},\\
+\nstart
+»\footA{Y \lemma{y}}{\emph{om.} {\jm}} pues vos, claro baró\emph{n},\\
 tanta sangre derramastes\\                                                                    
 de paganos,\\
 esperad el gualardó\emph{n}\\
@@ -887,16 +887,16 @@ por las manos;\par
 y co\emph{n} esta confiança\\
 y co\emph{n} la fe ta\emph{n} entera\\
 que tenéis,\\
-partid con buena\edtext{}{\Afootnote[nosep]{bua/bna/vna {\eg}}}\footnoteE{b[uen]a {\eg} (?). En el manuscrito hay una mancha de tinta borrada en el folio arriba de «ua»/«na», que no propicia distinguir correctamente si es un signo de contracción ~, leyéndose así «buena»/«buena» --el copista confunde \emph{n} y \emph{u} incluso en otros lugares del manuscrito--, o constituye un error, «bua». \textcite{PérezPriego1990}, \textcite{PérezPriego2017} y \textcite{Severin2000} leen en conjunto «vna»; Beltrán lee «bua», y sostiene que yace «con corrección, o abreviatura poco visible, interlineada» \parencite[123]{Beltrán1991}.} espera\emph{n}ça,\\
-\edtext{que la vida verdadera}{\Afootnote{estotra vida tercera {\delt}, {\mn}, {\im}}}\\                                                                           
-\edtext{cobraréis}{\lemma{cobrareys}\Afootnote{ganareys {\delt}, {\mn}, {\im}}}.»\par
-\pend
+partid con buena\footA{}{bua/bna/vna {\eg}}\footE{b[uen]a {\eg} (?). En el manuscrito hay una mancha de tinta borrada en el folio arriba de «ua»/«na», que no propicia distinguir correctamente si es un signo de contracción ~, leyéndose así «buena»/«buena» --el copista confunde \emph{n} y \emph{u} incluso en otros lugares del manuscrito--, o constituye un error, «bua». \textcite{PérezPriego1990}, \textcite{PérezPriego2017} y \textcite{Severin2000} leen en conjunto «vna»; Beltrán lee «bua», y sostiene que yace «con corrección, o abreviatura poco visible, interlineada» \parencite[123]{Beltrán1991}.} espera\emph{n}ça,\\
+\footA{que la vida verdadera}{estotra vida tercera {\delt}, {\mn}, {\im}}\\                                                                           
+\footA{cobraréis \lemma{cobrareys}}{ganareys {\delt}, {\mn}, {\im}}.»\par
+\nend
 %
 \begin{center}
-	\textbf{XXXVIII}\footnoteA{\textbf{XXXVIII} rresponde don rrodrigo manrrique a la muerte {\eg}; Respuesta del maestre {\jm}; Reza a la muerte {\rl}; Respondel Maestre {\mn}, {\im}.}
+	\textbf{XXXVIII}\footT{\textbf{XXXVIII} rresponde don rrodrigo manrrique a la muerte {\eg}; Respuesta del maestre {\jm}; Reza a la muerte {\rl}; Respondel Maestre {\mn}, {\im}.}
 \end{center}
-\pstart
-«No \edtext{gastemos}{\Afootnote{tengamos {\rl}}} tie\emph{n}po ya\\
+\nstart
+«No \footA{gastemos}{tengamos {\rl}} tie\emph{n}po ya\\
 en esta vida mezq\emph{ui}na\\ 
 por tal modo,\\
 que mi volu\emph{n}tad está\\
@@ -907,46 +907,46 @@ co\emph{n} voluntad plaze\emph{n}tera,\\
 clara y pura,\\
 q\emph{ue} q\emph{ue}rer onbre bivir\\
 q\emph{ua}ndo Dios q\emph{ui}ere q\emph{ue} muera,\\
-\edtext{es}{\Afootnote{es grand {\mn}}} locura.\par
-\pend
+\footA{es}{es grand {\mn}} locura.\par
+\nend
 %
 \begin{center}
-	\textbf{XXXIX}\footnoteA{\textbf{XXXIX} oraçion que fizo el maestre {\eg}; Oracion {\jm}, {\rl}, {\im}; Oracion quel Maestre face á Dios {\mn}.}
+	\textbf{XXXIX}\footT{\textbf{XXXIX} oraçion que fizo el maestre {\eg}; Oracion {\jm}, {\rl}, {\im}; Oracion quel Maestre face á Dios {\mn}.}
 \end{center}
-\pstart
+\nstart
 »Tú, q\emph{ue} por n\emph{uest}ra maldat\\
-tomaste forma \edtext{çevil}{\lemma{çeuil}\Afootnote{seruil {\rl}, {\mn}}}\footnoteE{«çeuil» tiene la acepción de «villano», hombre de la villa, opuesto a noble, según \textcite{Lida1947}, quien expone una serie de testimonios tales como \emph{Triunfos} de Juan de Padilla, el Cartujano, y \emph{Diálogo de la lengua} de Juan de Valdés, más otros para ilustrar la historia semántica del vocablo, unido a su hipótesis de que \emph{civil} tenía una acepción adicional, «cruel», según textos de don Juan de Mena. El \emph{Tesoro de la lengua castellana} de \textcite{Covarrubias1611} registra para \emph{cevil} la definición «hombre apocado, y miserable, de ce, que acrecienta la sinificacion, y de vil, que valdra muy vil». A esto acompaña la definición para \emph{civil} «desestimable, mezquino, ruin, y de baxa condicion y procedéres» (\emph{Autoridades}, 3ª acepción), que recuerdan \textcite{CorominasYPascual1980-1991} y añaden «... actualmente ya se ha anticuado, pero de la que hay multitud de ejemplos desde la \emph{Gr. Conq. de Ultr.} hasta el s. XVII (Salas Barbadillo)». Orduna sostiene que la copla «reproduce en sus cuatro partes evidentes el mismo esquema de motivos. Los primeros 9 versos resumen la invocación a Cristo Salvador del grupo 4-6, llevándola a un plano de comunicación directa [...] los últimos 3 versos concluyen la Oración [...] con el sometimiento total a la clemencia del Salvador» \parencite[145-146]{Orduna1967}; pero esto lo sostiene --siguiendo a \textcite{Foulché-Delbosc1912}-- con la lección \emph{servil}, que \textcite{Beltrán1991,Beltrán2013} descarta por \emph{lectio facilior}.}\\
-y \edtext{baxo}{\Afootnote{\emph{om.} {\jm}}} no\emph{n}bre;\\
-\edtext{Tú, que a tu divinidat}{\lemma{tu que a tu}\Afootnote{juntaste {\jm}}}\\
-ju\emph{n}taste \edtext{cosa}{\Afootnote{avna cosa {\jm}}} ta\emph{n} vil\\
-como \edtext{el}{\Afootnote{es el {\eg}, {\rl}}} onbre;\par
-Tú, \edtext{que los}{\Afootnote{que tan {\delt}, {\mn}, {\im}}} gra\emph{n}des torme\emph{n}tos\\
+tomaste forma \footA{çevil \lemma{çeuil}}{seruil {\rl}, {\mn}}\footE{«çeuil» tiene la acepción de «villano», hombre de la villa, opuesto a noble, según \textcite{Lida1947}, quien expone una serie de testimonios tales como \emph{Triunfos} de Juan de Padilla, el Cartujano, y \emph{Diálogo de la lengua} de Juan de Valdés, más otros para ilustrar la historia semántica del vocablo, unido a su hipótesis de que \emph{civil} tenía una acepción adicional, «cruel», según textos de don Juan de Mena. El \emph{Tesoro de la lengua castellana} de \textcite{Covarrubias1611} registra para \emph{cevil} la definición «hombre apocado, y miserable, de ce, que acrecienta la sinificacion, y de vil, que valdra muy vil». A esto acompaña la definición para \emph{civil} «desestimable, mezquino, ruin, y de baxa condicion y procedéres» (\emph{Autoridades}, 3ª acepción), que recuerdan \textcite{CorominasYPascual1980-1991} y añaden «... actualmente ya se ha anticuado, pero de la que hay multitud de ejemplos desde la \emph{Gr. Conq. de Ultr.} hasta el s. XVII (Salas Barbadillo)». Orduna sostiene que la copla «reproduce en sus cuatro partes evidentes el mismo esquema de motivos. Los primeros 9 versos resumen la invocación a Cristo Salvador del grupo 4-6, llevándola a un plano de comunicación directa [...] los últimos 3 versos concluyen la Oración [...] con el sometimiento total a la clemencia del Salvador» \parencite[145-146]{Orduna1967}; pero esto lo sostiene --siguiendo a \textcite{Foulché-Delbosc1912}-- con la lección \emph{servil}, que \textcite{Beltrán1991,Beltrán2013} descarta por \emph{lectio facilior}.}\\
+y \footA{baxo}{\emph{om.} {\jm}} no\emph{n}bre;\\
+\footA{Tú, que a tu divinidat \lemma{tu que a tu}}{juntaste {\jm}}\\
+ju\emph{n}taste \footA{cosa}{avna cosa {\jm}} ta\emph{n} vil\\
+como \footA{el}{es el {\eg}, {\rl}} onbre;\par
+Tú, \footA{que los}{que tan {\delt}, {\mn}, {\im}} gra\emph{n}des torme\emph{n}tos\\
 sofriste sin resiste\emph{n}çia\\
 en tu persona,\\
 no por mis meresçimie\emph{n}tos,\\
 mas por tu sola cleme\emph{n}çia\\ 
 me perdona.»\par
-\pend
+\nend
 %
 \begin{center}
-    \textbf{XL}\footnoteA{\textbf{XL} fin {\eg}, {\rl}, {\mn}; Torna el actor y faze fin {\jm}.}
+    \textbf{XL}\footT{\textbf{XL} fin {\eg}, {\rl}, {\mn}; Torna el actor y faze fin {\jm}.}
 \end{center}
-\pstart
+\nstart
 Así, co\emph{n} tal ente\emph{n}der,\\
 todos sentidos humanos\\
-\edtext{conservados}{\lemma{conseruados}\Afootnote{oluidados {\im}}}\footnoteE{«oluidados» pertenece a {\im}, testimonio representante del subarquetipo \emph{\textbf{β}}. La elección entre las adiáforas es en extremo compleja porque, siguiendo el \emph{stemma codicum} de \textcite{PérezPriego2017} --y el de Beltrán, en parte--, cada una tiene igual peso en los subarquetipos \emph{\textbf{α}} y \emph{\textbf{β}} por remitir al arquetipo \emph{\textbf{X}}. Cada lección tuvo defensores o «electores»; para la lección \emph{conservados}, \textcite{PérezPriego1990,PérezPriego2017}, \textcite{Conde2009} y \textcite{Gonzalez2019}, y para \emph{olvidados}, su innovador y elector \textcite{Beltrán1991,Beltrán2013,Beltrán2016}. Beltrán escuetamente argumenta en favor de la lección \emph{olvidados} en su edición crítica con el siguiente argumento: «\emph{oluidados} y \emph{conseruados} se reparten en las ramas del \emph{stemma} [...] Prefiero la primera opción, pues \emph{sentido} tiene la acepción "apetito, o parte inferior del hombre" (\emph{Aut.}) reforzado probablemente por el calificativo \emph{humanos}, lo que hace de esta variante un caso evidente de \emph{lectio difficilior}.» \parencite[158]{Beltrán1991}. Tras el comentario de \textcite{Conde2009}, en su edición de 2013, Beltrán le otorga mayor autoridad al \emph{Diccionario de Autoridades} --como diccionario antiguo--, porque refleja «valores arcaicos» y conserva «interpretaciones específicas de las ciencias o el pensamiento antiguo», y porque no es una cuestión puramente léxica, sino de valoración moral --en el vocablo--; y en su extenso estudio del 2016 añade, además, ejemplos textuales de época para justificar la acepción «apetitos». (La lección \emph{conservados} forma parte de la tradición \emph{vulgata} del texto) \textcite{Conde2009} sostiene, contra Beltrán, que del mismo modo que el editor utiliza la segunda acepción para \emph{sentidos} (apetito), podría utilizar la principal, \emph{potencia}/\emph{facultad} para percibir «las impresiones de los objetos exteriores», y la tercera, \emph{entendimiento}/\emph{razón}, por tanto, no resultaría plausible utilizar la evidencia lexicográfica para adoptar \emph{olvidados} como lección para la \emph{constitutio textus}; y proporciona, además, diferentes testimonios para justificar \emph{conservados} y, de paso, la preeminencia de la 1ª y 3ª acepción para \emph{sentidos}, esto es, \emph{entendimiento}/\emph{razón} (\emph{Autoridades}). \textcite{PérezPriego2017} sigue a Conde. \textcite{Gonzalez2019} propone que la lección \emph{olvidados} resulta de una trivialización; luego, en su análisis, indica que los \emph{sentidos} no son cinco, sino diez, según la tradición medieval: cinco internos y cinco externos; los externos, los propios de la carne; los internos, siguiendo a Tomás de Aquino (\emph{S. Theol.}, I, q. 78, a. 4) --aquel, a su vez, siguiendo a Avicena y su \emph{De anima}--, son la \emph{sensus communis}, \emph{imaginatio}, \emph{phantasia}, \emph{aestimativa} y \emph{memorativa}. Luego, cita dos textos de autoridades que, con certeza, leyó Manrique: La \comillas{Partida Segunda} de Alfonso X el Sabio (\emph{Siete Partidas}, II, XIII) y la \emph{Coronación del Marqués de Santillana} de Juan de Mena \parencite[90-92]{Mena2009}. Siguiendo esas influencias, resulta en una unidad entre \emph{sentidos} y \emph{entendimiento}, y olvidar los \emph{sentidos}, como indica la lección \emph{olvidados}, implicaría en quebrar tal unidad al \comillas{deshacerse} de ambas; y al tratarse de una unidad --siguiendo la evidencia proporcionada acerca de las \emph{ars moriendi} y la tradición--, la lección, como se estudia en ecdótica, no puede ir contra el propio autor.\par
+\footA{conservados \lemma{conseruados}}{oluidados {\im}}\footE{«oluidados» pertenece a {\im}, testimonio representante del subarquetipo \emph{\textbf{β}}. La elección entre las adiáforas es en extremo compleja porque, siguiendo el \emph{stemma codicum} de \textcite{PérezPriego2017} --y el de Beltrán, en parte--, cada una tiene igual peso en los subarquetipos \emph{\textbf{α}} y \emph{\textbf{β}} por remitir al arquetipo \emph{\textbf{X}}. Cada lección tuvo defensores o «electores»; para la lección \emph{conservados}, \textcite{PérezPriego1990,PérezPriego2017}, \textcite{Conde2009} y \textcite{Gonzalez2019}, y para \emph{olvidados}, su innovador y elector \textcite{Beltrán1991,Beltrán2013,Beltrán2016}. Beltrán escuetamente argumenta en favor de la lección \emph{olvidados} en su edición crítica con el siguiente argumento: «\emph{oluidados} y \emph{conseruados} se reparten en las ramas del \emph{stemma} [...] Prefiero la primera opción, pues \emph{sentido} tiene la acepción "apetito, o parte inferior del hombre" (\emph{Aut.}) reforzado probablemente por el calificativo \emph{humanos}, lo que hace de esta variante un caso evidente de \emph{lectio difficilior}.» \parencite[158]{Beltrán1991}. Tras el comentario de \textcite{Conde2009}, en su edición de 2013, Beltrán le otorga mayor autoridad al \emph{Diccionario de Autoridades} --como diccionario antiguo--, porque refleja «valores arcaicos» y conserva «interpretaciones específicas de las ciencias o el pensamiento antiguo», y porque no es una cuestión puramente léxica, sino de valoración moral --en el vocablo--; y en su extenso estudio del 2016 añade, además, ejemplos textuales de época para justificar la acepción «apetitos». (La lección \emph{conservados} forma parte de la tradición \emph{vulgata} del texto) \textcite{Conde2009} sostiene, contra Beltrán, que del mismo modo que el editor utiliza la segunda acepción para \emph{sentidos} (apetito), podría utilizar la principal, \emph{potencia}/\emph{facultad} para percibir «las impresiones de los objetos exteriores», y la tercera, \emph{entendimiento}/\emph{razón}, por tanto, no resultaría plausible utilizar la evidencia lexicográfica para adoptar \emph{olvidados} como lección para la \emph{constitutio textus}; y proporciona, además, diferentes testimonios para justificar \emph{conservados} y, de paso, la preeminencia de la 1ª y 3ª acepción para \emph{sentidos}, esto es, \emph{entendimiento}/\emph{razón} (\emph{Autoridades}). \textcite{PérezPriego2017} sigue a Conde. \textcite{Gonzalez2019} propone que la lección \emph{olvidados} resulta de una trivialización; luego, en su análisis, indica que los \emph{sentidos} no son cinco, sino diez, según la tradición medieval: cinco internos y cinco externos; los externos, los propios de la carne; los internos, siguiendo a Tomás de Aquino (\emph{S. Theol.}, I, q. 78, a. 4) --aquel, a su vez, siguiendo a Avicena y su \emph{De anima}--, son la \emph{sensus communis}, \emph{imaginatio}, \emph{phantasia}, \emph{aestimativa} y \emph{memorativa}. Luego, cita dos textos de autoridades que, con certeza, leyó Manrique: La \comillas{Partida Segunda} de Alfonso X el Sabio (\emph{Siete Partidas}, II, XIII) y la \emph{Coronación del Marqués de Santillana} de Juan de Mena \parencite[90-92]{Mena2009}. Siguiendo esas influencias, resulta en una unidad entre \emph{sentidos} y \emph{entendimiento}, y olvidar los \emph{sentidos}, como indica la lección \emph{olvidados}, implicaría en quebrar tal unidad al \comillas{deshacerse} de ambas; y al tratarse de una unidad --siguiendo la evidencia proporcionada acerca de las \emph{ars moriendi} y la tradición--, la lección, como se estudia en ecdótica, no puede ir contra el propio autor.\par
 Puede concluirse que Rodrigo Manrique fallece conservando facultades físicas y psicológicas (\emph{sentidos} y  \emph{entendimiento}), y que fallece en una «recta ley», ejerciendo los deberes propios que le corresponden como \emph{bellator}, esto es, «guerreando» \parencite[52-55]{Gonzalez2019}. La evidencia histórica y la reconstrucción del \emph{contextus} se inclinan hacia la lección \emph{conservados}.},\\
 çercado de su muger\\
-\edtext{}{\linenum{|||||480}\Afootnote[nosep]{\emph{sec. m.} {\eg}}}\edtext{y de sus fijos y hermanos}{\Afootnote{de sus hijos y ermanos {\eg}; y de fijos y de ermanos {\jm}, {\im}}}\\
+\footA[ad=480]{}{\emph{sec. m.} {\eg}}\footA{y de sus fijos y hermanos}{de sus hijos y ermanos {\eg}; y de fijos y de ermanos {\jm}, {\im}}\\
 y criados,\par
-dio el alma a quien \edtext{ge la dio}{\lemma{geladio}\Afootnote{gloria dio {\eg}}},\\
-el qual \edtext{la ponga}{\lemma{laponga}\Afootnote{ladio {\rl}}} en el cielo\\
+dio el alma a quien \footA{ge la dio \lemma{geladio}}{gloria dio {\eg}},\\
+el qual \footA{la ponga \lemma{laponga}}{ladio {\rl}} en el cielo\\
 y en su gloria;\\
-\edtext{q\emph{ue} aunq\emph{ue}}{\Afootnote{y aunque {\jm}, {\mn}, {\im}}} la vida \edtext{murió}{\lemma{murio}\Afootnote{perdio {\eg}, {\rl}}}\footnoteE{«murió» en {\jm}, {\mn} y {\im}. Continuando el argumento anterior, se opta por la lección \emph{murió} porque, al fallecer Rodrigo Manrique con todos sus «sentidos humanos conservados», él «se conservaría» a través de la memoria de sus allegados, cosa que no acontecería si «perdiese» la vida «carnal», porque «perder» tiene connotaciones negativas según las definiciones «ocasionar algún daño a las cosas, desmejorándolas o desluciéndolas» y «padecer algún daño, ruína o disminución en lo material, inmaterial o espiritual» (\emph{Autoridades}, acepciones 6ª y 7ª). Si la «perdiese», aceptando estas acepciones, podría «dañar» o «desmejorar» los \emph{sentidos} y el \emph{entendímiento}, facultades que «regresan» en «plena forma» a su dios, como ya demostraron \textcite{Conde2009} y \textcite{Gonzalez2019}. De ser así, \emph{perdió} anularía la lección \emph{conservados} y, por tanto, lo correcto sería \emph{murió} que, además, por pertenecer a los subarquetipos \emph{\textbf{α}} ({\jm} y {\mn}) y \emph{\textbf{β}} ({\im}), restituye la lección del arquetipo \emph{\textbf{X}}.},\\
-\edtext{dexónos}{\lemma{dexonos}\Afootnote{nos dexo {\jm}, {\mn}, {\im}}} harto consuelo\\ 
+\footA{q\emph{ue} aunq\emph{ue}}{y aunque {\jm}, {\mn}, {\im}} la vida \footA{murió \lemma{murio}}{perdio {\eg}, {\rl}}\footE{«murió» en {\jm}, {\mn} y {\im}. Continuando el argumento anterior, se opta por la lección \emph{murió} porque, al fallecer Rodrigo Manrique con todos sus «sentidos humanos conservados», él «se conservaría» a través de la memoria de sus allegados, cosa que no acontecería si «perdiese» la vida «carnal», porque «perder» tiene connotaciones negativas según las definiciones «ocasionar algún daño a las cosas, desmejorándolas o desluciéndolas» y «padecer algún daño, ruína o disminución en lo material, inmaterial o espiritual» (\emph{Autoridades}, acepciones 6ª y 7ª). Si la «perdiese», aceptando estas acepciones, podría «dañar» o «desmejorar» los \emph{sentidos} y el \emph{entendímiento}, facultades que «regresan» en «plena forma» a su dios, como ya demostraron \textcite{Conde2009} y \textcite{Gonzalez2019}. De ser así, \emph{perdió} anularía la lección \emph{conservados} y, por tanto, lo correcto sería \emph{murió} que, además, por pertenecer a los subarquetipos \emph{\textbf{α}} ({\jm} y {\mn}) y \emph{\textbf{β}} ({\im}), restituye la lección del arquetipo \emph{\textbf{X}}.},\\
+\footA{dexónos\lemma{dexonos}}{nos dexo {\jm}, {\mn}, {\im}} harto consuelo\\ 
 su memoria.\par
-\pend
-\endnumbering
+\nend
+\enum
 \repage
 %
 \head{}
@@ -958,8 +958,8 @@ su memoria.\par
 \begin{center}
 \textbf{I}
 \end{center}
-\beginnumbering
-\pstart
+\bnum
+\nstart
 		Es tu comienço lloroso,\\
 		tu salida syempre amarga\\
 		y nunca buena,\\
@@ -972,15 +972,15 @@ su memoria.\par
 		y los males vienen corriendo,\\
 		y después de venidos\\
 		duran mas.\par
-		\pend
-		\endnumbering
+		\nend
+		\bnum
 		\vspace*{11pt}
 %
 \begin{center}
 \textbf{II}
 \end{center}
-		\beginnumbering
-		\pstart
+		\bnum
+		\nstart
 		O mundo, pues que nos matas,\\
 		fuera la vida que diste\\
 		toda vida,\\
@@ -993,13 +993,13 @@ su memoria.\par
 		de los bienes tan desierta,\\
 		de plazeres y dulçores\\
 		despoblada.\par
-		\pend
-		\endnumbering\par
+		\nend
+		\enum\par
 %
-\vspace{11pt} Tras la copla XL, en {\im} yace un epitafio con la rúbrica \comillas{En su sepultura dize desta manera}, que enuncia:\vspace{5pt}\par
+\vspace{11pt} Tras la copla XL, en {\im} yace un epitafio con el encabezamiento\comillas{En su sepultura dize desta manera}, que enuncia:\vskip5pt\par
 %
 \comillas{Aquí yaze muerto el ombre\\
-	que vivo queda su nombre}.\footnoteE{Beltrán, citando a Luis de Salazar y Castro, recupera «AQVI YACE MVERTO VN HOMBRE, QVE VIVO DEJO SV NOMBRE» \prosecite[158]{Beltrán1991}.}
+	que vivo queda su nombre}.\footE{Beltrán, citando a Luis de Salazar y Castro, recupera «AQVI YACE MVERTO VN HOMBRE, QVE VIVO DEJO SV NOMBRE» \prosecite[158]{Beltrán1991}.}
 \enpage
 %
 \end{document}
