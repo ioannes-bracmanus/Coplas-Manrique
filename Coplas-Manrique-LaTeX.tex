@@ -1,10 +1,8 @@
 \documentclass[11pt,twoside]{article}
 \usepackage{fontspec}
-\usepackage[paperwidth=16.50cm,paperheight=23.00cm,top=2.20cm,inner=2.65cm,outer=1.90cm,bottom=2.20cm]{geometry}
-\usepackage{ragged2e}
-\usepackage{mparhack}
-\usepackage[a4,cam,center]{crop}
-\crop[cam]
+\usepackage[paperwidth=16.50cm,paperheight=23.00cm,twoside,textwidth=11.5cm,textheight=16.5cm,outer=2.2cm,heightrounded]{geometry}
+%\usepackage[a4,cam,center]{crop}
+%\crop[cam]
 \usepackage{polyglossia}
 \setdefaultlanguage{spanish}
 \setotherlanguage[variant=ancient]{greek}
@@ -13,9 +11,10 @@
 %
 \title{\huge\textbf{COPLAS SOBRE LA MUERTE DE SU PADRE}}
 \author{\huge\textsc{\textbf{Jorge Manrique}}}
-\date{\vspace{60pt}\textsc{Edición crítica liminar}\\\fontsize{60}{11}\selectfont{\vfill\textbf{\texttt{\LaTeX}}}}
+\date{\vspace{60pt}\textsc{edición crítica liminar}\\\fontsize{60}{11}\selectfont{\vfill\textbf{\texttt{\LaTeX}}}}
 %
 \setmainfont{TemporaNR}
+\topskip=14pt
 %
 \usepackage{tikz}
 \usetikzlibrary{trees}
@@ -36,9 +35,12 @@
 \linenummargin{outer}
 \nummarginsep{-25pt}{-60pt}
 \thepagelook{upter}
+\afootnoterule{none}
+%
 \usepackage{metalogo}
 %
 \newcommand{\comillas}[1]{«#1»}
+\usepackage{emptypage}
 %
 %
 \begin{document}
@@ -63,8 +65,8 @@ Edición y composición en \texttt{\XeLaTeX} por Ioannes Bracmanus.
 \pagenumbering{Roman}
 \setcounter{page}{1}
 \simplehead{\textsc{prefacio}}
-\section*{\centering\textsc{Prefacio}}
-\addcontentsline{toc}{section}{\textsc{Prefacio}}
+\section*{\centering\textsc{PREFACIO}}
+\addcontentsline{toc}{section}{\textsc{prefacio}}
 %
 \noindent\textsc{Jorge Manrique nació} ca. 1440 y murió en abril de 1479. Una noticia de su muerte la transmitió Fernando del Pulgar en su \emph{Crónica de los reyes Católicos}:\par
 %
@@ -76,8 +78,8 @@ El título, \emph{Coplas sobre la muerte de su padre}, resulta un tanto arbitrar
 %
 No se conservaron autógrafos de alguna copla ni testimonios que puedan considerarse apógrafos o idiógrafos. El testimonio más antiguo que contiene la colección de cuarenta coplas es el manuscrito del \emph{Cancionero de Egerton}, y no es sino hasta ca. 1482-83 --seis o siete años tras la redacción y cuatro o cinco tras el fallecimiento del autor-- que aparece en un impreso en carácter de \emph{editio princeps}. Es necesario destacar que los textos de Manrique solo se conservaron disueltos en cancioneros, a diferencia de otro escritor como Luis de Góngora, que habría gozado de \comillas{colecciones} con su obra.\par
 %
-\section*{\centering\textsc{Testimonios}}
-\addcontentsline{toc}{subsection}{\textsc{Testimonios}}
+\section*{\centering\textsc{TESTIMONIOS}}
+\addcontentsline{toc}{subsection}{\textsc{testimonios}}
 %
 \noindent Para las siglas de los testimonios se adoptaron las utilizadas por \textcite{PérezPriego2017} quien, a su vez, 
 las adoptó de Dutton y su trabajo \emph{El cancionero del s. XV (ca. 1360-1520)}. Los testimonios son:\par
@@ -106,8 +108,8 @@ Manuscrito en papel de 21 x 15cm., copia del s. XVIII de un manuscrito de fines 
 %
 Impresión incunable a doble columna con tipografía gótica, impreso en Zamora, 1483?, con 90 fols. totales. Los ff. 67r-70r contienen las coplas con el encabezamiento \comillas{Coplas que hizo do\emph{n} jorge manrriq\emph{ue} ala muerte del maestre de santiago do\emph{n} rodrigo manrique su padre}. Existen dos ejemplares y se hallan uno en la Biblioteca Nacional de España (INC/897), y otro, en la Real Biblioteca del Monasterio de San Lorenzo de El Escorial (38-I-22). <\url{https://bdh-rd.bne.es/viewer.vm?id=0000176297\&page=1}>.\par
 %
-\section*{\centering\textsc{Criterios de edición}}
-\addcontentsline{toc}{subsection}{\textsc{Criterios de edición}}
+\section*{\centering\textsc{CRITERIOS DE EDICIÓN}}
+\addcontentsline{toc}{subsection}{\textsc{criterios de edición}}
 %
 \noindent Para la fijación del texto se tuvo en cuenta el trabajo filológico de \textcite{Beltrán1991,Beltrán2013} y \textcite{PérezPriego1990,PérezPriego2017} y, conforme a ello, se siguió el subarquetipo \emph{\textbf{α}} del \emph{stemma codicum} construido por el segundo. Descartando el subarquetipo \emph{\textbf{β}}, siendo {\im} su testimonio más representativo\footE{Aunque el subarquetipo \emph{\textbf{β}} contenga otros testimonios útiles para la reconstrucción del arquetipo \emph{\textbf{X}} --esto es, \emph{\textbf{EM6}} y \emph{\textbf{PN1}}--, a efectos prácticos de esta edición liminar se utilizó únicamente {\im} por ser el testimonio más representativo del subarquetipo, según lo estudiaron \textcite{PérezPriego2017} y \textcite{Beltrán1991,Beltrán2013}.}, la filiación de los testimonios se resumiría con el siguiente \emph{stemma} reducido a partir de lo indicado\footE{Para el \emph{stemma} completo \emph{cfr.} \textcite[103]{PérezPriego2017}.}:\par
 %
@@ -169,26 +171,26 @@ Constituyen al aparato crítico el orden y rúbricas en los testimonios, el apar
 \repage
 %
 \simplehead{\textsc{bibliografía}}
-\section*{\centering\textsc{Bibliografía}}
-\addcontentsline{toc}{section}{\textsc{Bibliografía}}
+\section*{\centering\textsc{BIBLIOGRAFÍA}}
+\addcontentsline{toc}{section}{\textsc{bibliografía}}
 \nocite{*}
 \printbibliography[heading=none]
-\newpage
+\cleardoublepage
 %
 \pagenumbering{gobble}
 \section*{\centering\huge\textsc{\emph{Coplas sobre la muerte de su padre}}}
 \addcontentsline{toc}{section}{\emph{\textsc{Coplas sobre la muerte de su padre}}}
 %
-\section*{\centering\textsc{Con aparato crítico}}
+\section*{\centering\textsc{con aparato crítico}}
 \newpage
 %
 \pagenumbering{Roman}
-\setcounter{page}{9}
-\section*{\centering\textsc{Conspectus siglorum}}
-\addcontentsline{toc}{subsection}{\textsc{Conspectus siglorum}}
+\setcounter{page}{12}
+\section*{\centering\textsc{CONSPECTUS SIGLORUM}}
+\addcontentsline{toc}{subsection}{\textsc{conspectus siglorum}}
 %
-\subsection*{\normalsize\textsc{Sigla testimoniorum}}
-\addcontentsline{toc}{subsubsection}{\textsc{Sigla testimoniorum}}
+\subsection*{\normalsize\textsc{SIGLA TESTIMONIORUM}}
+\addcontentsline{toc}{subsubsection}{\textsc{sigla testimoniorum}}
 \vspace*{-2.5pt}
 \begin{itemize}[label=,leftmargin=0.6cm]%
 \item {\eg} = \emph{Cancionero de Egerton}, 1470?-1480?
@@ -199,8 +201,8 @@ Constituyen al aparato crítico el orden y rúbricas en los testimonios, el apar
 \item {\im} = \emph{Cancionero de fray Íñigo de Mendoza}, 1483?%
 \end{itemize}
 %
-\subsection*{\normalsize\textsc{Sigla apparati critici}}
-\addcontentsline{toc}{subsubsection}{\textsc{Sigla apparati critici}}
+\subsection*{\normalsize\textsc{SIGLA APPARATI CRITICI}}
+\addcontentsline{toc}{subsubsection}{\textsc{sigla apparati critici}}
 \vspace*{-2.5pt}
 \begin{itemize}[label=,leftmargin=0.6cm]%
 \item \emph{a. corr.} = ante correctionem.
@@ -314,6 +316,7 @@ al tienpo que feneçemos;\\
 así que, q\emph{ua}ndo morimos,\\
 descansamos.\par
 \poend
+\repage
 %
 \begin{center}
 	\textbf{VI}\footT{\textbf{VI} p\emph{r}osigue {\eg}.}
@@ -332,7 +335,6 @@ a nasçer \footA{acá \lemma{aca}}{aqua {\jm}} entre nos\\
 \emph{e} bevir en este suelo\\
 do murió.\par
 \poend
-\repage
 %
 \begin{center}
 	\textbf{VII}\footT{\textbf{VII} XXV en {\jm}; XIII en {\rl}.}
@@ -387,6 +389,7 @@ todo se torna graveza\\
 q\emph{ua}ndo llega al arraval \footA{}{a la hedat \emph{err.} {\eg}}\\
 de senetud.\par
 \poend
+\repage
 %
 \begin{center}
 	\textbf{X}\footT{\textbf{X} IX en {\jm}, {\rl}.}
@@ -603,7 +606,6 @@ su ma\emph{n}dar,\\
 ¿\footA{Qué fuero\emph{n} sino pesares \lemma{que fuero\emph{n} sino pesares}}{dolores, ansias pesares {\mn}; fueron le sy no {\im}}\\
 al dexar?\par
 \poend
-\repage
 %
 \begin{center}
 	\textbf{XXII}\footT{\textbf{XXII} XXXIV en {\jm}.}
@@ -621,7 +623,7 @@ y ensalçada;\\
 ¿qué fue sino claridat,\\
 \footA{que}{quando {\rl}} estando más ençe\emph{n}dida\\
 fue \footA{amatada}{matada {\jm}}?\par
-\poend
+\poend\repage
 %
 \begin{center}
 	\textbf{XXIII}\footT{\textbf{XXIII} XXXV en {\jm}.}
@@ -676,7 +678,6 @@ ni los quiero fazer caros,\\
 \footA{pues que todo el mu\emph{n}do sabe}{pues que todo el mu\emph{n}do lo sabe {\eg}; pues quel mundo todo sabe {\rl}; pues el mundo todo sabe {\im}}\\
 quales fuero\emph{n}.\par
 \poend
-\repage
 %
 \begin{center}
 	\textbf{XXVI}\footT{\textbf{XXVI} XIV en {\jm}.}
@@ -713,7 +714,6 @@ con alegría;\\
 \footA{Marco Atilio \lemma{marco atilio}}{marco tulio {\eg}, {\im}; mateo tulio {\jm}} en la verdad\\
 que prometía.\par
 \poend
-\repage
 %
 \begin{center}
 	\textbf{XXVIII}\footT{\textbf{[XXVIII]} XXVI en {\jm}. \textbf{\char"02016} prosigue {\eg}.}
@@ -788,7 +788,6 @@ bie\emph{n} gastada,\\
 la grand cavall\emph{er}ía\\
 del espada.\par
 \poend
-\repage
 %
 \begin{center}
 	\textbf{XXXII}\footT{\textbf{XXXII} XX en {\jm}.}
@@ -837,7 +836,7 @@ v\emph{uest}ro coraçó\emph{n} de azero\\
 muestre su esfuerço famoso\\ 
 en este trago.\par
 Y pues de vida y de salud\\
-fezistes ta\emph{n} poca cuenta\\     
+fezistes ta\emph{n} poca cuenta\\
 por la fama,\\
 \footA{fazedla de la virtud}{esfuercese la virtud {\delt}, {\mn}, {\im}; esforçad vuestra virtud {\hh}}\\
 para sofrir \footA{esta}{aquesta {\hh}} afrenta\\
@@ -896,7 +895,7 @@ que tenéis,\\
 partid con buena\footA{}{bua/bna/vna {\eg}}\footE{b[uen]a {\eg} (?). En el manuscrito hay una mancha de tinta borrada en el folio arriba de «ua»/«na», que no propicia distinguir correctamente si es un signo de contracción ~, leyéndose así «buena»/«buena» --el copista confunde \emph{n} y \emph{u} incluso en otros lugares del manuscrito--, o constituye un error, «bua». \textcite{PérezPriego1990}, \textcite{PérezPriego2017} y \textcite{Severin2000} leen en conjunto «vna»; Beltrán lee «bua», y sostiene que yace «con corrección, o abreviatura poco visible, interlineada» \parencite[123]{Beltrán1991}.} espera\emph{n}ça,\\
 \footA{que la vida verdadera}{estotra vida tercera {\delt}, {\mn}, {\im}}\\                                                                           
 \footA{cobraréis \lemma{cobrareys}}{ganareys {\delt}, {\mn}, {\im}}.»\par
-\poend
+\poend\repage
 %
 \begin{center}
 	\textbf{XXXVIII}\footT{\textbf{XXXVIII} rresponde don rrodrigo manrrique a la muerte {\eg}; Respuesta del maestre {\jm}; Reza a la muerte {\rl}; Respondel Maestre {\mn}, {\im}.}
@@ -982,6 +981,7 @@ su memoria.\par
 		\bnum
 		\vspace*{11pt}
 %
+\repage
 \begin{center}
 \textbf{II}
 \end{center}
@@ -1002,9 +1002,9 @@ su memoria.\par
 		\poend
 		\enum\par
 %
-\repage
+\vspace*{14pt}
 %
-Tras la copla XL, en {\im} yace un epitafio con el encabezamiento \comillas{En su sepultura dize desta manera}, que enuncia:\vskip5pt\par
+Tras la copla XL, en {\im}, yace un epitafio con el encabezamiento \comillas{En su sepultura dize desta manera}, que enuncia:\vskip5pt\par
 %
 \bnum
 \postart
