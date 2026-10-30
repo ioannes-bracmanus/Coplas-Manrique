@@ -8,12 +8,13 @@
 \usepackage{editionibus-criticis}
 \usepackage{lettrine}
 %
-\title{\huge\textbf{COPLAS SOBRE LA MUERTE DE SU PADRE}}
-\author{\huge\textsc{\textbf{Jorge Manrique}}}
-\date{\vspace{60pt}\textsc{edición crítica liminar}\\\fontsize{60}{11}\selectfont{\vfill\textbf{\texttt{\LaTeX}}}}
+\title{\huge\textbf{\notoserif COPLAS SOBRE LA MUERTE DE SU PADRE}}
+\author{\huge\textsc{\textbf{\notoserif Jorge Manrique}}}
+\date{\vspace{60pt}\textsc{\notoserif edición crítica liminar}\\\fsize{60}\selectfont{\vfill\textbf{\texttt{\LaTeX}}}}
 %
 \setmainfont{Common Serif}[RawFeature={+onum,-calt}]
-%\setmainfont{Libertinus Serif}[RawFeature=+onum]
+\newfontfamily{\notoserif}{Noto Serif}
+\newcommand{\fsize}[1]{\fontsize{#1}{1.2#1}\selectfont}
 %
 \usepackage{tikz}
 \usetikzlibrary{trees}
@@ -42,8 +43,10 @@
 	\kern 2.6pt}%
 %
 \usepackage{metalogo}
-%
 \newcommand{\comillas}[1]{«#1»}
+%
+\newfontfamily{\liningfont}{Common Serif}[RawFeature={+lnum,-calt}]
+\renewcommand{\ecpageformat}[1]{{\liningfont #1}}
 %
 %
 \begin{document}
